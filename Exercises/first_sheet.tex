@@ -1,0 +1,161 @@
+%This is my super simple Real Analysis Homework template
+
+\documentclass{article}
+\usepackage[ngerman]{babel}
+\usepackage[]{amsthm} %lets us use \begin{proof}
+\usepackage[]{amssymb} %gives us the character \varnothing
+\usepackage{mathtools}
+\usepackage{lineno}
+\usepackage[ansinew]{inputenc}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\uproman}[1]{\uppercase\expandafter{\romannumeral#1}}
+\title{Lösungen Kapitel 1}
+\author{Yannick Zelle}
+\date\today
+%This information doesn't actually show up on your document unless you use the maketitle command below
+
+\begin{document}
+\maketitle %This command prints the title based on information entered above
+
+%Section and subsection automatically number unless you put the asterisk next to them.
+
+
+%Basically, you type whatever text you want and use the $ sign to enter "math mode".
+%For fancy calligraphy letters, use \mathcal{}
+%Special characters are their own commands
+
+\section*{Exercise 1}
+ First, we will assign values to $p(M), p(m), p(e), P(n\mid M), P(n\mid m), P(n\mid e)$, so that $p(M) + p(m) + p(e) = 1$:
+ 
+ \[ p(M) := 0.01 \]
+ \[ p(m) := 0.1 \]
+ \[ p(e) := 0.89 \]
+ 
+ \[ p(n\mid M)=0.9 \]
+ \[ p(n\mid m)=0.08 \]
+ \[ p(n\mid e)=0.02 \]
+ 
+ The next step to apply Bayes' rule is now to calculate the probability of a noise:
+ 
+ \[p(n)= p(M) \cdot p(n\mid M) + p(m) \cdot p(n\mid m) + p(e) \cdot p(n\mid e)\]
+ 
+ \[ = 0.01 \cdot 0.9 + 0.1 \cdot 0.08 + 0.89 \cdot 0.02\]
+ 
+ \[ = 0.0348\]
+ 
+ We can now calculate the probability of a monster given noise by applying Bayes' rule:
+ 
+ \[ p(M \mid n) =\frac{p(n \mid M) \cdot p(M)}{p(n)}
+ \]
+ \[=\frac{0.9 \cdot 0.01}{0.034} \]
+ \[\approx 0.26\]
+
+
+
+\section*{Lösung Aufgabe 1}
+Das obenbeschrieben vorgehen lässt sich als das aufeinanderfolgende durchführen von 2 Zufallsexperimenten verstehen. Wobei :
+
+\begin{fleqn}%[1cm]
+	\[
+\Omega_1 = \{R_1, R_2, R_3, S_1, S_2, S_3, S_4 \} \]
+\[
+\Omega_2 = \{R_1, R_2, W_1, W_2, S_1, S_2, S_3 \}
+\]
+\end{fleqn}
+
+
+Die Ergebnismenge des gesamten Experimentes lässt sich dann beschrieben als :
+
+\begin{fleqn}%[1cm]
+	\[
+\Omega= \{(\omega_1, \omega_2) \mid \omega_1 \in \Omega_1, \omega_2 \in \Omega_2 \}
+\]
+\end{fleqn}
+ Wir bemerken dass, $card(\Omega) = card(\Omega_1) \cdot card(\Omega_2)=7 \cdot 7 =49$
+ Betrachten wir das gefragte Ereignis $(\omega_i, \omega_j) \in A$. 
+ Hierzu benötigen wir alle Fälle bei denen $\omega_i$ und $\omega_j$ die gleiche Farbe haben. Es gibt 3 rote Kugeln in $\Omega_1$ und 2 in $Omega_2$. Demnach gibt es $3 \cdot 2= 6 $ Möglichkeiten 2 rote Kugeln zu ziehen. Für Schwarz folgen nach der selben Argumentation $4 \cdot 3 = 12$ Möglichkeiten. Demnach gilt $card(A)= 6+12=18$. Also ist die gesuchte Wahrscheinlichkeit:
+ 
+\[
+p((\omega_i,\omega_j))= \frac{card(A)}{card(\Omega)}= \frac{18}{49}
+\]
+
+\section{Aufgabe 2}
+
+Ein Würfel wird 7 mal geworfen. Wie hoch ist die Wahrscheinlichkeit, dass jeder der Zahlen 1-6 einmal unter den Wurfergebnissen vorkommt.
+
+\section{Lösung Aufgabe 2}
+
+Der Einfachheit halber können wir das durchgeführte Experiment, als eine Stichprobe ohne Reihenfolge mit Rücklegen verstehen. Wir würden also den Wurf $(1,1,2,3,4,5,6)$, genauso aufschreiben wie den Wurf $(6,6,5,4,3,2,1)$, nämlich als $\{1,1,2,3,4,5,6 \}$.
+Demnach ist unser Stichpropbenraum $\Omega_{\uproman{4}}$ mit:
+
+\[
+card(\Omega_{\uproman{4}})= \binom{N+n-1}{n}=\binom{12}{6}=\frac{12!}{6!\cdot 6!}=924
+\]
+
+
+Weiter überlegen wir uns, dass in unserem Ergebnisraum $A$ jeweils ein Element doppelt vorkommen kann. Also ist
+
+\[
+card(A)=6
+\]
+
+Insgesamt gilt dann:
+
+\[
+p(A)=\frac{card(A)}{card(\Omega_{\uproman{4}})}=\frac{1}{154}
+\]
+\section{Aufgabe 3}
+Unter 32 Karten befinden sich 4 Asse. Die Karten werden gemischt und nacheinander aufgedeckt.
+Wie groß ist die Wahrscheinlichkeit, dass die neunte aufgedeckte Karte das zweite aufgedeckte
+Ass ist?
+
+\section{Lösung Aufgabe 3}
+Es handelt sich bei diesem Experiment um eine Stichprobe in Reihenfolge ohne Zurüclegen mit $N = 32$ und $n = 9$. Daher ist :
+
+\[
+card(\Omega) = (N)_n = N(N-1)\cdot ... \cdot (N-n+1)= 32 \cdot 31 \cdot ... \cdot 22
+\]
+
+Für die größe des uns interessierendes Ereignis $A$ lässt sich Argumentieren, dass wir 4 Asse haben, die jeweils an 8 Positionen seien können. An der 9. Position bleiben noch 3 Asse übrig. Übrig bleiben 7 Positionen, die sich als Permutation der 28 Karten verstehen lassen, die keine Asse sind. Insgesamt ergibt sich also:
+
+\[
+card(A) = 4*3*8*(28)_7
+\]
+ Demnach können wir die Wahrscheinlichkeit berechnen mit:
+ 
+\[
+p(A)=\frac{card(A)}{card\Omega}=\frac{4*3*8*(28)_7}{(32)_9
+}
+\] 
+
+\section{Aufgabe 4}
+
+Die Ecken eines Wiirfels sind gleichm?Big schr?g abgeschliffen worden, so dass der Wiirfel auch
+auf jeder dieser Ecken liegen bleiben kann. Allerdings ist die Wahrscheinlichkeit jeder Ecke nur
+1/4 so groB wie die jeder Seite. Wie groB ist die Wahrscheinlichkeit einer Sechs?
+
+\section{Lösung Aufgabe 4}
+
+Da ein Würfel 6 Seiten und 8 Ecken hat Enthält $\Omega$ Insgesamt 14 Elemente. Wit bezeichnen in der Folge Ecken mit $e$ und Seiten mit $s$. Da alle Ecken und alle Seiten jeweils die gleiche Wahrscheinlichkeit haben und $P(\Omega)=1$ gilt:
+\[
+6 \cdot p(s)+ 8 \cdot p(e) = 1 \\
+
+\]
+Zusätzlich wissen wir aus der Aufgabenstellung, dass:
+
+\[
+4\cdot p(e)=p(s) \newline
+\]
+\[
+\Leftrightarrow \frac{1}{4}\cdot p(s)=p(e)
+\]
+
+Setzen wir dies oben ein ergibt sich :
+
+\[
+p(s)=\frac{1}{8}=p(6)
+\]
+
+
+
+\end{document}

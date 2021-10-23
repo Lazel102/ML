@@ -1,0 +1,198 @@
+%This is my super simple Real Analysis Homework template
+
+\documentclass{article}
+\usepackage[ngerman]{babel}
+\usepackage[]{amsthm} %lets us use \begin{proof}
+\usepackage[]{amssymb} %gives us the character \varnothing
+\usepackage{mathtools}
+\usepackage{lineno}
+\usepackage[ansinew]{inputenc}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\uproman}[1]{\uppercase\expandafter{\romannumeral#1}}
+\title{Machine Learning Exercise Sheet 2}
+\author{Yannick Zelle and Nina Fischer}
+\date\today
+%This information doesn't actually show up on your document unless you use the maketitle command below
+
+\begin{document}
+
+\maketitle %This command prints the title based on information entered above
+\section*{Exercise 1}
+\subsection*{(a)}
+Given is the DAG $G_1$ with the following associated probabilities:
+\begin{itemize}
+    \item $p(A)=0.3$
+    \item $p(B \mid A)=0.2$
+    \item $p(B \mid \neg A)=0.4$
+    \item $p(C \mid B)=0.7$
+    \item $p(C \mid \neg B)=0.5$
+\end{itemize}
+
+From there we can deduct the following probabilities:
+
+\begin{itemize}
+    \item $p(\neg A)=0.7$
+    \item $p(\neg B \mid A)=0.8$
+    \item $p(\neg B \mid \neg A)=0.6$
+    \item $p(\neg C \mid B)=0.3$
+    \item $p(\neg C \mid \neg B)=0.5$
+\end{itemize}
+
+From $G_1$ we can deduct the joint probability distribution:
+
+\begin{align*}
+    p(A,B,C)=p(A) \cdot p(B \mid A) \cdot p(C \mid B)
+\end{align*}
+
+Using this Probabilitydistribution we can calculate P(B):
+
+\begin{align*}
+    p(B)    &= \sum_{A,C}^{} p(A,B=1,C) \\
+            &= p(A) \cdot p(B \mid A) \cdot p(C \mid B) \\
+            &+ p(\neg A) \cdot p(B \mid \neg A) \cdot p(C \mid B) \\
+            &+ p(\neg A) \cdot p(B \mid \neg A) \cdot p(\neg C \mid B) \\
+            &+ p( A) \cdot p(B \mid  A) \cdot p(\neg C \mid B) \\
+            &= 0.3 \cdot 0.2 \cdot 0.7 \\
+            &+ 0.7 \cdot 0.4 \cdot 0.7 \\
+            &+ 0.7 \cdot 0.4 \cdot 0.3 \\
+            &+ 0.3\cdot 0.2 \cdot 0.3 \\
+            &= 0.34
+\end{align*}
+
+and P(C):
+
+\begin{align*}
+    p(C)    &= \sum_{A,B}^{} p(A,B,C=1) \\
+            &= p(A) \cdot p(B \mid A) \cdot p(C \mid B) \\
+            &+ p(\neg A) \cdot p(B \mid \neg A) \cdot p(C \mid B) \\
+            &+ p(\neg A) \cdot p(\neg B \mid \neg A) \cdot p(C \mid \neg B) \\
+            &+ p( A) \cdot p(\neg B \mid  A) \cdot p( C \mid \neg B) \\
+            &= 0.3 \cdot 0.2 \cdot 0.7 \\
+            &+ 0.7 \cdot 0.4 \cdot 0.7 \\
+            &+ 0.7 \cdot 0.6 \cdot 0.5 \\
+            &+ 0.3 \cdot 0.8 \cdot 0.5 \\
+            &= 0.568
+\end{align*}
+
+\subsection*{(b)}
+Given is a DAG $G_2$ and the associated probabilities:
+\begin{itemize}
+    \item $p(A)=0.3$
+    \item $p(B \mid A)= 0.2$
+    \item $p(B \mid \neg A) = 0.4$
+    \item $p(c \mid A)= 0.7$
+    \item $p(C \mid \neg A)= 0.6$
+    \item $p(D \mid B,C)=0.9$
+    \item $p(D \mid B, \neg C)=0.5$
+    \item $p(D \mid \neg B, C)=0.3$
+    \item $p(D \mid \neg B, \neg C)= 0.3$
+\end{itemize}
+
+From there we can deductthe following probabilities:
+\begin{itemize}
+    \item $p(\neg A)=0.7$
+    \item $p(\neg B \mid A)= 0.8$
+    \item $p(\neg B \mid \neg A) = 0.6$
+    \item $p(\neg c \mid A)= 0.3$
+    \item $p(\neg C \mid \neg A)= 0.4$
+    \item $p(\neg D \mid B,C)=0.1$
+    \item $p(\neg D \mid B, \neg C)=0.5$
+    \item $p(\neg D \mid \neg B, C)=0.7$
+    \item $p(\neg D \mid \neg B, \neg C)= 0.7$
+\end{itemize}
+
+From the $G_2$ we can deduct the following joint Probabilitydistribution:
+
+\[
+p(A,B,C,D)= p(A) \cdot p(C \mid A) \cdot p(B \mid A) \cdot p(D \mid B,C)    
+\]
+
+Using the joint Probabilitydistribution and the probabilities from above, we can calculate $p(B)$:
+
+\begin{align*}
+p(B)    &= \sum_{A,C,D} p(A,B=1,C, D) \\
+        &= p(A) \cdot p(C \mid A) \cdot p(B \mid A) \cdot p(D \mid B,C) \\
+        &+ p(A) \cdot p(C \mid A) \cdot p(B \mid A) \cdot p(\neg D \mid B,C) \\
+        &+ p(A) \cdot p(\neg C \mid A) \cdot p(B \mid A) \cdot p(D \mid B,\neg C) \\
+        &+ p(A) \cdot p(\neg C \mid A) \cdot p(B \mid A) \cdot p(\neg D \mid B,\neg C) \\
+        &+ p(\neg A) \cdot p(C \mid \neg A) \cdot p(B \mid \neg A) \cdot p(D \mid B,C) \\
+        &+ p(\neg A) \cdot p(C \mid \neg A) \cdot p(B \mid \neg A) \cdot p(\neg D \mid B,C) \\
+        &+ p(\neg A) \cdot p(\neg C \mid \neg A) \cdot p(B \mid \neg A) \cdot p(D \mid B,\neg C) \\
+        &+ p(\neg A) \cdot p(\neg C \mid \neg A) \cdot p(B \mid \neg A) \cdot p(\neg D \mid B,\neg C) \\
+        &= 0.7 \cdot 0.7 \cdot 0.2 \cdot 0.9\\
+        &+ 0.7 \cdot 0.3 \cdot 0.8 \cdot 0.1 \\
+        &+ 0.7 \cdot 0.3\cdot 0.2\cdot 0.5 \\
+        &+ 0.7 \cdot 0.3 \cdot 0.2 \cdot 0.5 \\
+        &+ 0.3 \cdot 0.6 \cdot 0.4 \cdot 0.9 \\
+        &+ 0.3\cdot 0.6 \cdot 0.4\cdot 0.1 \\
+        &+ 0.3 \cdot 0.4 \cdot 0.4 \cdot 0.5 \\
+        &+ 0.3\cdot 0.4 \cdot 0.4 \cdot 0.5 \\
+        &= 0.27
+\end{align*}
+
+and p(D):
+
+\begin{align*}
+p(D)    &= \sum_{A,C,B} p(A,B,C, D=1)\\
+        &= p(A) \cdot p(C \mid A) \cdot p(B \mid A) \cdot p(D \mid B,C)\\
+        &+ p(A) \cdot p(C \mid A) \cdot p(\neg B \mid A) \cdot p( D \mid \neg B,C) \\
+        &+ p(A) \cdot p(\neg C \mid A) \cdot p(B \mid A) \cdot p(D \mid B,\neg C) \\
+        &+ p(A) \cdot p(\neg C \mid A) \cdot p(\neg B \mid A) \cdot p( D \mid \neg B,\neg C) \\
+        &+ p(\neg A) \cdot p(C \mid \neg A) \cdot p(B \mid \neg A) \cdot p(D \mid B,C) \\
+        &+ p(\neg A) \cdot p(C \mid \neg A) \cdot p\neg (B \mid \neg A) \cdot p(D \mid \neg B,C) \\
+        &+ p(\neg A) \cdot p(\neg C \mid \neg A) \cdot p(B \mid \neg A) \cdot p(D \mid B,\neg C) \\
+        &+ p(\neg A) \cdot p(\neg C \mid \neg A) \cdot p(\neg B \mid \neg A) \cdot p(D \mid \neg B,\neg C) \\
+        &= 0.7 \cdot 0.7 \cdot 0.2 \cdot 0.9 \\
+        &+ 0.7 \cdot 0.3 \cdot 0.8 \cdot 0.3 \\
+        &+ 0.7 \cdot 0.3\cdot 0.2 \cdot 0.5 \\
+        &+ 0.7 \cdot 0.3 \cdot 0.8 \cdot 0.3 \\
+        &+ 0.3 \cdot 0.6 \cdot 0.4 \cdot 0.9 \\
+        &+ 0.3 \cdot 0.6 \cdot 0.6\cdot 0.3 \\
+        &+ 0.3 \cdot 0.4 \cdot 0.4 \cdot 0.5 \\
+        &+ 0.3 \cdot 0.4 \cdot 0.6 \cdot 0.3 \\
+        &= 0.36
+\end{align*}
+
+
+
+\section*{Exercise 2}
+\subsection*{(a)}
+\[
+  p(A, B, C, D, E, F ) = p(A) \cdot p(B \mid A) \cdot p(C \mid B) \cdot p(D \mid B) \cdot p(E \mid C,D) \cdot p(F \mid E)
+\]
+
+\subsection*{(b)}
+\[
+p(A, B, C, D, E ) = p(A) \cdot p(B \mid A) \cdot p(C \mid B) \cdot p(D \mid B) \cdot p(E \mid C,D) 
+\]
+
+\subsection*{(c)}
+\textbf{Task:} Find a minimal set S that d-seperates A and F and prove that this is the case.
+\begin{proof}
+    We propose $S= \{ B \}$ to prove that the criteria of S holds we have actually to prove two statements:
+    \begin{enumerate}
+        \item S d-seperates A and F
+        \item there is no set with fewer elements that also d-seperates A and F
+    \end{enumerate}
+     
+We will start with the first statement. Between A and F exist two paths:
+\begin{align*}
+    p_1 = A \rightarrow B \rightarrow C \rightarrow E \rightarrow F \\
+    p_2 = A \rightarrow B \rightarrow D \rightarrow E \rightarrow F 
+\end{align*}
+
+We have $p_1$ is blocked by S because with $i_k = B$ we have : $i_k \in S$ and $A \rightarrow B \rightarrow C \leftrightarrow i_{k-1} \rightarrow i_k \rightarrow i_{k+1}$ 
+\end{proof}
+
+%Section and subsection automatically number unless you put the asterisk next to them.
+
+
+%Basically, you type whatever text you want and use the $ sign to enter "math mode".
+%For fancy calligraphy letters, use \mathcal{}
+%Special characters are their own commands
+
+
+
+
+
+\end{document}

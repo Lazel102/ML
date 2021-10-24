@@ -10,7 +10,8 @@
 \usepackage{graphicx}
 \newcommand{\dsep}{\rotatebox[origin=c]{90}{$\models$}}
 \newcommand{\R}{\mathbb{R}}
-\newcommand{\uproman}[1]{\uppercase\expandafter{\romannumeral#1}}
+\newcommand{\uproman}[1]
+{\uppercase\expandafter{\romannumeral#1}}
 \title{Machine Learning Exercise Sheet 2}
 \author{Yannick Zelle and Nina Fischer}
 \date\today
@@ -200,6 +201,64 @@ It is left to show that there is no set with fewer elements that also d-seperate
     Also $p_2$ is blocked by $S$ because with $i_k=E$ we have : $i_k \notin S$ and $C \rightarrow E \leftarrow D \leftrightarrow i_{k-1} \rightarrow i_k \leftarrow i_{k+1}$
     So every path between C and D is blocked by S and therefore $C \dsep_G D \mid B$ holds.
 \end{proof}
+
+\section*{Exercise 3}
+\subsection*{(a)}
+We will proof that 
+\begin{align*}
+    A \rightarrow B \rightarrow C \implies A \dsep C \mid B
+\end{align*}
+\begin{proof}
+\begin{align*}
+	p(A,B,C) = p(A) \cdot p(B \mid A) \cdot p(C\mid B) \\
+	\Leftrightarrow p(A,B,C) = p(A, B) \cdot p(C\mid B) \\
+	\Leftrightarrow p(A,B,C) = p(A\mid B) \cdot p(B) \cdot p(C\mid B) \\
+	\Leftrightarrow \frac{p(A,B,C)}{p(B)} = p(A\mid B) \cdot p(C\mid B) \\
+	\Leftrightarrow p(A,C \mid B) = p(A, C \mid B)
+\end{align*}
+\end{proof}
+
+\subsection*{(b)}
+We will proof that 
+\begin{align*}
+    A \leftarrow B \leftarrow C \implies A \dsep C \mid B
+\end{align*}
+and we know from a that $p(C) \cdot p(B \mid C) \Leftrightarrow p(B) \cdot p(C \mid B)$.
+\begin{proof}
+\begin{align*}
+	p(A,B,C) = p(A \mid B) \cdot p(B \mid C) \cdot p(C) \\
+	\Leftrightarrow p(A,B,C) = p(A\mid B) \cdot p(C\mid B) \cdot p(B) \\
+	\Leftrightarrow \frac{p(A,B,C)}{p(B)} = p(A\mid B) \cdot p(C\mid B) \\
+	\Leftrightarrow p(A,C \mid B) = p(A, C \mid B)
+\end{align*}
+\end{proof}
+
+\subsection*{(c)}
+We will proof that 
+\begin{align*}
+    A \leftarrow B \rightarrow C \implies A \dsep C \mid B
+\end{align*}
+\begin{proof}
+\begin{align*}
+	p(A,B,C) = p(A \mid B) \cdot p(B) \cdot p(C \mid B)  \\
+	\Leftrightarrow \frac{p(A,B,C)}{p(B)} = p(A\mid B) \cdot p(C\mid B) \\
+	\Leftrightarrow p(A,C \mid B) = p(A, C \mid B)
+\end{align*}
+\end{proof}
+
+\subsection*{(d)}
+We will proof that 
+\begin{align*}
+    A \rightarrow B \leftarrow C \implies A \dsep C 
+\end{align*}
+\begin{proof}
+\begin{align*}
+	p(A,B,C) = p(A) \cdot p(B \mid A) \cdot p(B \mid C) \cdot p(C) \\
+	\Leftrightarrow \frac{p(A,B,C)}{p(A) \cdot p(C)} = p(B\mid A) \cdot p(B\mid C) \\
+	\Leftrightarrow p(B \mid A,C) = p(B \mid A,C)
+\end{align*}
+\end{proof}
+
 
 %Section and subsection automatically number unless you put the asterisk next to them.
 

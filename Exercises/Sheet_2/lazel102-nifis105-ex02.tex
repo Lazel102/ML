@@ -259,6 +259,31 @@ We will proof that
 \end{align*}
 \end{proof}
 
+\section*{Exercise 4}
+\subsection*{(a)}
+ We will proof that $E(a \cdot X + Y) = a \cdot E(X) + E(Y) $ with the sum rule and the factor rule.
+\begin{proof}
+	\begin{align*}
+	E(a \cdot X + Y)
+	& = \int a \cdot X + Y dx \\
+	&= \int a \cdot X dx + \int Y dx \\
+	&= a \cdot \int X dx + \int Y dx \\
+	&= a \cdot E(X) + E(Y)
+	\end{align*}
+\end{proof}
+
+\subsection*{(b)}
+We will proof that $Var(a \cdot X) = a^{2} \cdot Var(X)$ with the result of a.
+\begin{proof}
+	\begin{align*}
+		Var(a \cdot X) 
+		&= E(a \cdot X - \mu)^{2} \\
+		&= E(a^{2} \cdot (X - \mu)^{2} )\\
+		&= a^{2} \cdot E(X - \mu)^{2} \\
+		&= a^{2} \cdot Var(X)
+	\end{align*}
+\end{proof}
+
 
 %Section and subsection automatically number unless you put the asterisk next to them.
 

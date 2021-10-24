@@ -210,11 +210,12 @@ We will proof that
 \end{align*}
 \begin{proof}
 \begin{align*}
-	p(A,B,C) = p(A) \cdot p(B \mid A) \cdot p(C\mid B) \\
-	\Leftrightarrow p(A,B,C) = p(A, B) \cdot p(C\mid B) \\
-	\Leftrightarrow p(A,B,C) = p(A\mid B) \cdot p(B) \cdot p(C\mid B) \\
-	\Leftrightarrow \frac{p(A,B,C)}{p(B)} = p(A\mid B) \cdot p(C\mid B) \\
-	\Leftrightarrow p(A,C \mid B) = p(A, C \mid B)
+	&p(A,B,C) = p(A) \cdot p(B \mid A) \cdot p(C\mid B) \\
+	&\Leftrightarrow p(A,B,C) = p(A, B) \cdot p(C\mid B) \\
+	&\Leftrightarrow p(A,B,C) = p(A\mid B) \cdot p(B) \cdot p(C\mid B) \\
+	&\Leftrightarrow \frac{p(A,B,C)}{p(B)} = p(A\mid B) \cdot p(C\mid B) \\
+	&\Leftrightarrow p(A,C \mid B) = p(A\mid B) \cdot p(C\mid B) \\
+    &\implies A \dsep C \mid B
 \end{align*}
 \end{proof}
 
@@ -226,10 +227,11 @@ We will proof that
 and we know from a that $p(C) \cdot p(B \mid C) \Leftrightarrow p(B) \cdot p(C \mid B)$.
 \begin{proof}
 \begin{align*}
-	p(A,B,C) = p(A \mid B) \cdot p(B \mid C) \cdot p(C) \\
-	\Leftrightarrow p(A,B,C) = p(A\mid B) \cdot p(C\mid B) \cdot p(B) \\
-	\Leftrightarrow \frac{p(A,B,C)}{p(B)} = p(A\mid B) \cdot p(C\mid B) \\
-	\Leftrightarrow p(A,C \mid B) = p(A, C \mid B)
+	&p(A,B,C) = p(A \mid B) \cdot p(B \mid C) \cdot p(C) \\
+	&\Leftrightarrow p(A,B,C) = p(A\mid B) \cdot p(C\mid B) \cdot p(B) \\
+	&\Leftrightarrow \frac{p(A,B,C)}{p(B)} = p(A\mid B) \cdot p(C\mid B) \\
+	&\Leftrightarrow p(A,C \mid B) = p(A\mid B) \cdot p(C\mid B)\\
+    &\implies A \dsep C \mid B
 \end{align*}
 \end{proof}
 
@@ -240,9 +242,10 @@ We will proof that
 \end{align*}
 \begin{proof}
 \begin{align*}
-	p(A,B,C) = p(A \mid B) \cdot p(B) \cdot p(C \mid B)  \\
-	\Leftrightarrow \frac{p(A,B,C)}{p(B)} = p(A\mid B) \cdot p(C\mid B) \\
-	\Leftrightarrow p(A,C \mid B) = p(A, C \mid B)
+	&p(A,B,C) = p(A \mid B) \cdot p(B) \cdot p(C \mid B)  \\
+	&\Leftrightarrow \frac{p(A,B,C)}{p(B)} = p(A\mid B) \cdot p(C\mid B) \\
+	&\Leftrightarrow p(A,C \mid B) = p(A\mid B) \cdot p(C\mid B) \\
+    &\implies A \dsep C \mid B
 \end{align*}
 \end{proof}
 
@@ -255,7 +258,8 @@ We will proof that
 \begin{align*}
 	p(A,B,C) = p(A) \cdot p(B \mid A) \cdot p(B \mid C) \cdot p(C) \\
 	\Leftrightarrow \frac{p(A,B,C)}{p(A) \cdot p(C)} = p(B\mid A) \cdot p(B\mid C) \\
-	\Leftrightarrow p(B \mid A,C) = p(B \mid A,C)
+	\Leftrightarrow p(B \mid A,C) = p(B\mid A) \cdot p(B\mid C)
+    
 \end{align*}
 \end{proof}
 

@@ -7,6 +7,8 @@
 \usepackage{mathtools}
 \usepackage{lineno}
 \usepackage[ansinew]{inputenc}
+\usepackage{graphicx}
+\newcommand{\dsep}{\rotatebox[origin=c]{90}{$\models$}}
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\uproman}[1]{\uppercase\expandafter{\romannumeral#1}}
 \title{Machine Learning Exercise Sheet 2}
@@ -181,7 +183,22 @@ We will start with the first statement. Between A and F exist two paths:
     p_2 = A \rightarrow B \rightarrow D \rightarrow E \rightarrow F 
 \end{align*}
 
-We have $p_1$ is blocked by S because with $i_k = B$ we have : $i_k \in S$ and $A \rightarrow B \rightarrow C \leftrightarrow i_{k-1} \rightarrow i_k \rightarrow i_{k+1}$ 
+We have $p_1$ is blocked by S because with $i_k = B$ we have : $i_k \in S$ and $A \rightarrow B \rightarrow C \leftrightarrow i_{k-1} \rightarrow i_k \rightarrow i_{k+1}$ and $p_2$ is blocked by S because with $i_k = B$ we have : $i_k \in S$ and $A \rightarrow B \rightarrow D \leftrightarrow i_{k-1} \rightarrow i_k \rightarrow i_{k+1}$
+It is left to show that there is no set with fewer elements that also d-seperates A and F. The only set that has fewer elements is the empty set but the empty set is neither blocking $p_1$ nor $p_2$ according to the definition.
+\end{proof}
+
+\subsection*{(d)}
+\begin{proof}
+    
+    We will proof that $C \dsep_G D \mid B$ i.e B d-seperates C and D holds. 
+    This is the case if every path is blocked by $S=\{B\}$. There are two paths from C to D:
+    \begin{align*}
+        p_1 = C \leftarrow B \rightarrow D \\
+        p_2 = C \rightarrow E \leftarrow D
+    \end{align*}
+    $p_1$ is blocked by S because with $i_k=B$ we have $i_k \in S$ and $C \leftarrow B \rightarrow D \leftrightarrow i_{k-1} \leftrightarrow \leftarrow i_k \rightarrow i_{k+1}$.
+    Also $p_2$ is blocked by $S$ because with $i_k=E$ we have : $i_k \notin S$ and $C \rightarrow E \leftarrow D \leftrightarrow i_{k-1} \rightarrow i_k \leftarrow i_{k+1}$
+    So every path between C and D is blocked by S and therefore $C \dsep_G D \mid B$ holds.
 \end{proof}
 
 %Section and subsection automatically number unless you put the asterisk next to them.

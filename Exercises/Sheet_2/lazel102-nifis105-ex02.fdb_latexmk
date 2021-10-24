@@ -1,8 +1,8 @@
 # Fdb version 3
-["pdflatex"] 1635004161 "/home/zet/Desktop/Current Semester/ML/Exercises/Sheet_2/lazel102-nifis105-ex02.tex" "/home/zet/Desktop/Current Semester/ML/Exercises/Sheet_2/lazel102-nifis105-ex02.pdf" "lazel102-nifis105-ex02" 1635004161
+["pdflatex"] 1635065009 "/home/zet/Desktop/Current Semester/ML/Exercises/Sheet_2/lazel102-nifis105-ex02.tex" "/home/zet/Desktop/Current Semester/ML/Exercises/Sheet_2/lazel102-nifis105-ex02.pdf" "lazel102-nifis105-ex02" 1635065009
   "/etc/texmf/web2c/texmf.cnf" 1597081286 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/zet/Desktop/Current Semester/ML/Exercises/Sheet_2/lazel102-nifis105-ex02.aux" 1635004161 77 1bbc31b2ed86eb3267625919bf60c5e0 ""
-  "/home/zet/Desktop/Current Semester/ML/Exercises/Sheet_2/lazel102-nifis105-ex02.tex" 1635004160 7381 b4f764532e8e798d39acd7c8f0d295ae ""
+  "/home/zet/Desktop/Current Semester/ML/Exercises/Sheet_2/lazel102-nifis105-ex02.aux" 1635065009 77 1bbc31b2ed86eb3267625919bf60c5e0 ""
+  "/home/zet/Desktop/Current Semester/ML/Exercises/Sheet_2/lazel102-nifis105-ex02.tex" 1635065008 8642 2ccc38084e9c0b1dcd0bb227debcfbcb ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -79,11 +79,11 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1581979058 38841 ce3692aa899bb693b90b87eaa5d4d84e ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1597081342 4770781 1ed1abab22da9c3e2cc82e4db562318b ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1597081367 8255700 4a560a1964254796a6c61f1337dd9981 ""
-  "lazel102-nifis105-ex02.aux" 1635004161 77 1bbc31b2ed86eb3267625919bf60c5e0 "pdflatex"
-  "lazel102-nifis105-ex02.tex" 1635004160 7381 b4f764532e8e798d39acd7c8f0d295ae ""
+  "lazel102-nifis105-ex02.aux" 1635065009 77 1bbc31b2ed86eb3267625919bf60c5e0 "pdflatex"
+  "lazel102-nifis105-ex02.tex" 1635065008 8642 2ccc38084e9c0b1dcd0bb227debcfbcb ""
   (generated)
-  "lazel102-nifis105-ex02.aux"
-  "/home/zet/Desktop/Current Semester/ML/Exercises/Sheet_2/lazel102-nifis105-ex02.log"
   "lazel102-nifis105-ex02.log"
   "lazel102-nifis105-ex02.pdf"
+  "/home/zet/Desktop/Current Semester/ML/Exercises/Sheet_2/lazel102-nifis105-ex02.log"
   "/home/zet/Desktop/Current Semester/ML/Exercises/Sheet_2/lazel102-nifis105-ex02.pdf"
+  "lazel102-nifis105-ex02.aux"

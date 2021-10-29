@@ -1,0 +1,63 @@
+%This is my super simple Real Analysis Homework template
+
+\documentclass{article}
+\usepackage[english]{babel}
+\usepackage[]{amsthm} %lets us use \begin{proof}
+\usepackage[]{amssymb} %gives us the character \varnothing
+\usepackage{mathtools}
+\usepackage{lineno}
+\usepackage[ansinew]{inputenc}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\uproman}[1]{\uppercase\expandafter{\romannumeral#1}}
+\title{Solutions Sheet 3}
+\author{Nina Fischer and Yannick Zelle}
+\date\today
+%This information doesn't actually show up on your document unless you use the maketitle command below
+
+\begin{document}
+\maketitle %This command prints the title based on information entered above
+
+%Section and subsection automatically number unless you put the asterisk next to them.
+
+
+%Basically, you type whatever text you want and use the $ sign to enter "math mode".
+%For fancy calligraphy letters, use \mathcal{}
+%Special characters are their own commands
+
+\section*{Exercise 1}
+ \textbf{Task:} Describe the maximum likelihood estimator for the following distributions:
+
+ \subsection*{(a)}
+ \[
+ \mathcal{N}(x \mid \mu, \sigma^2)
+ \]
+
+ We denote with $f_\mu$ the PDF of the normal distribution. By using the Lemma 6.2.3 we can write the log-likelihood function as:
+
+ \begin{align*}
+     l(\mu) &= ln(\prod^n_{i=1} f_{\mu})\\
+            &=ln(\prod^n_{i=1} e^{a+\eta x_i -\frac{1}{2}\lambda^2x_i^2})\\
+            &= \sum^n_{i=1}ln(e^{a+\eta x_i -\frac{1}{2}\lambda^2x_i^2})\\
+            &= \sum^n_{i=1} -\frac{1}{2}(log(2\pi)-log(\lambda^2)+\frac{\mu^2}{\sigma^2}) + \frac{\mu}{\sigma^2}x_i-\frac{1}{2}\lambda^2x_i^2\\
+ \end{align*}
+
+To find $\mu$ which maximizes $l(\mu)$ we calculate:
+
+\begin{align*}
+    \frac{\delta l(\mu)}{\delta \mu}    &= \sum_{i=1}^n -\frac{\mu}{\sigma^2} + \frac{1}{\sigma^2}x_i  \\
+                                        &= -n\frac{\mu}{\sigma^2} + \frac{1}{\sigma^2} \sum_{i=1}^n x_i
+\end{align*}
+ $l(\mu)$ is maximal if :
+
+ \begin{align*}
+     l(\mu) = 0 & \leftrightarrow 0 = -n\frac{\mu}{\sigma^2} + \frac{1}{\sigma^2} \sum_{i=1}^n x_i\\
+                & \leftrightarrow \mu =  \frac{1}{n} \sum_{i=1}^n x_i
+    \end{align*}
+
+Since $\frac{\delta^2 l(\mu)}{\delta^2 \mu} = -\frac{1}{\sigma^2}< 0$, with $\mu_o := \frac{1}{n} \sum_{i=1}^n x_i$ we obtain a global maximum for $l(\mu)$ and we chose $\mu_0$ therefore as our estimator.
+\section*{Exercise 2}
+
+\section*{Exercise 2}
+
+
+\end{document}

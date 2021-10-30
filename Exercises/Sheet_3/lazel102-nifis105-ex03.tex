@@ -55,6 +55,47 @@ To find $\mu$ which maximizes $l(\mu)$ we calculate:
     \end{align*}
 
 Since $\frac{\delta^2 l(\mu)}{\delta^2 \mu} = -\frac{1}{\sigma^2}< 0$, with $\mu_o := \frac{1}{n} \sum_{i=1}^n x_i$ we obtain a global maximum for $l(\mu)$ and we chose $\mu_0$ therefore as our estimator.
+
+\subsection*{(b)}
+
+Exponential distribution with the densitity function $f(x|\lambda)= \lambda e^{-\lambda x}$ with $\lambda > 0$ and observations $x_i \geq 0$.
+We have :
+\begin{align*}
+    f(x|\lambda) &= \lambda e^{-\lambda x}\\
+                &= e^{-\lambda x +ln(\lambda)}
+\end{align*}
+
+and the likelihood function:
+
+\begin{align*}
+    L(\lambda)= \prod_{i=1}^n f(x_i | \lambda)
+\end{align*}
+Therefore the log-likelihood is giveb by:
+
+\begin{align*}
+    l(\lambda)  &= ln(\prod_{i=1}^n f(x_i | \lambda)) \\
+                &= \sum_{i=1}^n ln(f(x_i| \lambda))\\
+                &= \sum_{i=1}^n ln( e^{-\lambda x_i +ln(\lambda)})\\
+                &= sum_{i=1}^n -\lambda x_i +ln(\lambda)
+\end{align*}
+With the same argument as in (a) we derive:
+\begin{align*}
+\frac{\delta l(\lambda)}{\delta \lambda}     &= \sum_{i=1}^n x_i + \frac{1}{\lambda} \\
+                                            &= \frac{n}{\lambda} - \sum_{i=1}^n x_i
+\end{align*}
+
+Then we have :
+
+\begin{align*}
+    0  = \frac{\delta l(\lambda)}{\delta \lambda}    & \leftrightarrow \lambda = \frac{n}{\sum_{i=1}^n x_i}
+\end{align*}
+We also have 
+
+\begin{align*}
+    \frac{\delta^2 l(\lambda)}{\delta^2 \lambda} = -\frac{1}{\lambda^2}<0
+\end{align*}
+
+therefore we chose $\lambda_0 =  \frac{n}{\sum_{i=1}^n x_i}$ as our estimator.
 \section*{Exercise 2}
 
 \section*{Exercise 2}

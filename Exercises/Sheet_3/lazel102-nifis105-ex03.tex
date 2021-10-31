@@ -76,7 +76,7 @@ Therefore the log-likelihood is giveb by:
     l(\lambda)  &= ln(\prod_{i=1}^n f(x_i | \lambda)) \\
                 &= \sum_{i=1}^n ln(f(x_i| \lambda))\\
                 &= \sum_{i=1}^n ln( e^{-\lambda x_i +ln(\lambda)})\\
-                &= sum_{i=1}^n -\lambda x_i +ln(\lambda)
+                &= \sum_{i=1}^n -\lambda x_i +ln(\lambda)
 \end{align*}
 With the same argument as in (a) we derive:
 \begin{align*}
@@ -97,8 +97,35 @@ We also have
 
 therefore we chose $\lambda_0 =  \frac{n}{\sum_{i=1}^n x_i}$ as our estimator.
 \section*{Exercise 2}
+\textbf{Given:} From our observation of the experiment and our prior knowledge we have :
+\begin{align*}
+    &p(\theta) = Dir(\theta \mid \alpha) \\
+    &p( \mathcal{D} \mid \theta) = Mu(x \mid n,\theta)
+\end{align*}
+\textbf{Show} 
+\begin{align*}
+    p(\theta \mid \mathcal{D}) = Dir(\theta \mid \alpha+x)
+\end{align*}
 
-\section*{Exercise 2}
+\begin{proof}
+    Since the normalizing factor of a Distribution is dependent on the other factor of the distribution we can show the statement by showing :
+    \begin{align*}
+        p(\theta \mid \mathcal{D}) 	\propto Dir(\theta \mid \alpha + x)
+    \end{align*}
+From the lecture we know:
+\begin{align*}
+    p(\theta \mid \mathcal{D})  &= p(\theta) \cdot p( \mathcal{D} \mid \theta) \\
+                                &= Dir(\theta \mid \alpha) \cdot Mu(x \mid n,\theta) \\
+                                &= Z^{-1} \cdot \prod_{k=1}^K \theta_k^{a_k-1} \cdot Z^{-2} \cdot \prod_{j=1}^K \theta_j^{x_j}\\
+                                &= Z^{-3}  \cdot \prod_{k=1}^K \theta_k^{a_k + x_k-1}\\
+                                &\propto Dir(\theta \mid \alpha + x)
+\end{align*}
+
+With $Z^{-i}$  being normalizing factors. Therefore we have    
+\[
+     p(\theta \mid \mathcal{D}) = Dir(\theta \mid \alpha+x)
+    \]
+\end{proof}
 
 
 \end{document}

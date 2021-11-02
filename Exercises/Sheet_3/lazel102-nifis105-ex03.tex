@@ -58,7 +58,7 @@ Since $\frac{\delta^2 l(\mu)}{\delta^2 \mu} = -\frac{1}{\sigma^2}< 0$, with $\mu
 
 \subsection*{(b)}
 
-Exponential distribution with the densitity function $f(x|\lambda)= \lambda e^{-\lambda x}$ with $\lambda > 0$ and observations $x_i \geq 0$.
+Exponential distribution with the probability densitity function $f(x|\lambda)= \lambda e^{-\lambda x}$ with $\lambda > 0$ and observations $x_i \geq 0$.
 We have :
 \begin{align*}
     f(x|\lambda) &= \lambda e^{-\lambda x}\\
@@ -70,7 +70,7 @@ and the likelihood function:
 \begin{align*}
     L(\lambda)= \prod_{i=1}^n f(x_i | \lambda)
 \end{align*}
-Therefore the log-likelihood is giveb by:
+Therefore the log-likelihood is given by:
 
 \begin{align*}
     l(\lambda)  &= ln(\prod_{i=1}^n f(x_i | \lambda)) \\
@@ -96,6 +96,48 @@ We also have
 \end{align*}
 
 therefore we chose $\lambda_0 =  \frac{n}{\sum_{i=1}^n x_i}$ as our estimator.
+
+\subsection*{(c)}
+
+Gamma distribution with the probability densitity function $g(x|\alpha,\lambda)=\frac{1}{ \Gamma(\alpha)} \lambda^{\alpha} x^{(\alpha - 1)} e^{-\lambda x}$ with $\alpha > 0$ and observations $x_1, ..., x_n \geq 0$.
+We have :
+\begin{align*}
+    g(x|\alpha,\lambda) &=\frac{1}{ \Gamma(\alpha)} \lambda^{\alpha} x^{(\alpha - 1)} e^{-\lambda x}\\
+                &= e^{ln(\frac{1}{\Gamma(\alpha)} \lambda^{\alpha} x^{(\alpha - 1)}) -\lambda x }
+\end{align*}
+
+and the likelihood function:
+
+\begin{align*}
+    L(\alpha, \lambda)= \prod_{i=1}^n g(x_i | \alpha, \lambda)
+\end{align*}
+Therefore the log-likelihood is given by:
+
+\begin{align*}
+    l(\alpha, \lambda)  &= ln(\prod_{i=1}^n g(x_i | \alpha, \lambda)) \\
+                &= \sum_{i=1}^n ln(g(x_i| \alpha, \lambda))\\
+                &= \sum_{i=1}^n ln( e^{ln(\frac{1}{\Gamma(\alpha)} \lambda^{\alpha} x^{(\alpha - 1)}) -\lambda x })\\
+                &= \sum_{i=1}^n ln(\frac{1}{\Gamma(\alpha)} \lambda^{\alpha} x_i ^{(\alpha -1)}) - \lambda x_i
+\end{align*}
+With the same argument as in (a) we derive:
+\begin{align*}
+\frac{\delta l(\alpha, \lambda)}{\delta \lambda}  &= \sum_{i=1}^n  \frac{\alpha}{\Gamma(\alpha)} x_i ^{(\alpha - 1)} \lambda ^{(\alpha - 1)} \frac{\Gamma(\alpha)}{\lambda^{\alpha} x_i ^{\alpha - 1}}\\
+                                            &= \sum_{i=1}^n \frac{\alpha}{\lambda} - x_i \\
+                                            &= n \frac{\alpha}{\lambda} \sum_{i=1}^n x_i
+\end{align*}
+
+Then we have :
+
+\begin{align*}
+    0  = \frac{\delta l(\alpha, \lambda)}{\delta \lambda}    & \leftrightarrow \lambda = \frac{n \alpha}{\sum_{i=1}^n x_i}
+\end{align*}
+We also have 
+
+\begin{align*}
+    \frac{\delta^2 l(\alpha, \lambda)}{\delta^2 \lambda} = n \frac{\alpha}{\lambda^2}<0
+\end{align*}
+
+therefore we chose $\lambda_0 = \frac{n \alpha}{\sum_{i=1}^n x_i}$ as our estimator.
 \section*{Exercise 2}
 \textbf{Given:} From our observation of the experiment and our prior knowledge we have :
 \begin{align*}

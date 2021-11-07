@@ -1,0 +1,70 @@
+%This is my super simple Real Analysis Homework template
+
+\documentclass{article}
+\usepackage[english]{babel}
+\usepackage[]{amsthm} %lets us use \begin{proof}
+\usepackage[]{amssymb} %gives us the character \varnothing
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{lineno}
+\usepackage[ansinew]{inputenc}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\uproman}[1]{\uppercase\expandafter{\romannumeral#1}}
+\title{Solutions Sheet}
+\author{Nina Fischer and Yannick Zelle}
+\date\today
+%This information doesn't actually show up on your document unless you use the maketitle command below
+
+\begin{document}
+\maketitle %This command prints the title based on information entered above
+
+%Section and subsection automatically number unless you put the asterisk next to them.
+
+
+%Basically, you type whatever text you want and use the $ sign to enter "math mode".
+%For fancy calligraphy letters, use \mathcal{}
+%Special characters are their own commands
+
+\section*{Exercise 1}
+\begin{itemize}
+    \item [\textbf{(a)}] We have the random variable $X \sim \mathcal{U}(c,d)$. Therefore we have the pdf :
+ \begin{align*}
+ p_x(X) =   \begin{cases}
+    \frac{1}{c-d} &c \leq x \leq d \\
+    0 &\text{Otherwise}
+    \end{cases}
+\end{align*}
+
+We now create the new random variable $Y(X)=aX+b$. Therefore we can deduct the inverse function:
+
+\begin{align*}
+    X(Y) = \frac{y-b}{a}
+\end{align*}
+
+Furthermore we can deduct:
+
+\begin{align*}
+    \frac{\delta X(Y)}{\delta Y} = \frac{1}{a}
+\end{align*}
+
+Since Y(X) is an increasing monotonic function, because $Y^{\prime}(X)=a>0$ according to therorem 7.1 :
+\begin{align*}
+p_y(Y) = p_x(X(Y)) \frac{\delta X(Y)}{\delta Y} = \begin{cases}
+    \frac{1}{(c-d)a} &c \leq \frac{y-b}{a} \leq d \\
+    0 &\text{Otherwise}
+    \end{cases}
+\end{align*}
+
+\item[\textbf{(b)}] Wit the same argumentation as in a we can deduct
+
+\begin{align*}
+    p_y(Y)= \frac{1}{a(\sqrt{2\pi \sigma^2})}exp(-\frac{(\frac{Y-b}{a}- \mu)^2}{2 \sigma^2})
+\end{align*}  
+\end{itemize}
+
+\section*{Exercise 2}
+
+\section*{Exercise 2}
+
+
+\end{document}

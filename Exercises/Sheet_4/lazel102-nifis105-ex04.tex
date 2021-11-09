@@ -55,7 +55,7 @@ p_y(Y) = p_x(X(Y)) \frac{\delta X(Y)}{\delta Y} = \begin{cases}
     \end{cases}
 \end{align*}
 
-\item[\textbf{(b)}] Wit the same argumentation as in a we can deduct
+\item[\textbf{(b)}] With the same argumentation as in a we can deduct
 
 \begin{align*}
     p_y(Y)= \frac{1}{a(\sqrt{2\pi \sigma^2})}exp(-\frac{(\frac{Y-b}{a}- \mu)^2}{2 \sigma^2})
@@ -64,7 +64,31 @@ p_y(Y) = p_x(X(Y)) \frac{\delta X(Y)}{\delta Y} = \begin{cases}
 
 \section*{Exercise 2}
 
-\section*{Exercise 2}
+We have $p(\omega) = \mathcal{N}(\omega \mid \omega_0, V_0)$ and $p(y \mid X, \omega) = \mathcal{N}(y \mid X\omega, \sum)$.
 
+\begin{align*}
+&p(\omega \mid X, y) \\
+&= p(y\mid X,\omega) \\
+ &= \mathcal{N}(y\mid X\omega, \sum) \cdot p(\omega) \\
+ &= exp(-\frac{1}{2} (y - X\omega) ^{T} \sum \nolimits ^{-1}(y - X\omega)) \cdot \mathcal{N}(\omega \mid \omega_0, V_0) \\
+ &= exp(-\frac{1}{2} (y - X\omega) ^{T} \sum \nolimits ^{-1}(y - X\omega)) \cdot exp(-\frac{1}{2}(\omega - \omega_0) ^{T} V_0 ^{-1}(\omega - \omega_0)) \\
+ &= exp(-\frac{1}{2} (y - X\omega) ^{T} \sum \nolimits ^{-1}(y - X\omega) -\frac{1}{2}(\omega - \omega_0) ^{T} V_0 ^{-1}(\omega - \omega_0)) \\
+  &= exp -\frac{1}{2} ((y - X\omega) ^{T} \sum \nolimits ^{-1}(y - X\omega) + (\omega - \omega_0) ^{T} V_0 ^{-1}(\omega - \omega_0)) \\
+  &= exp -\frac{1}{2}(y^{T} \sum \nolimits ^{-1} y- (X\omega)^{T} \sum \nolimits ^{-1} y - y ^{T} \sum \nolimits ^{-1} X\omega + (X\omega^{T} \sum \nolimits ^{-1} X \omega \\
+  &+ w^{T} V_0^{-1} \omega - w_0^{T}V_0^{-1}\omega - \omega^{T} V_0^{-1}\omega_0 + \omega_0^{T} V_0^{-1} \omega_0) \\
+  &= exp -\frac{1}{2}(y^{T} \sum \nolimits^{-1} y + \omega_0^{T}V_0^{-1}\omega_0 - (2y^{T} \sum \nolimits ^{-1} X + 2 \omega_0^{T} V_0^{-1}) \omega \\
+  &+ \omega^{T}(V_0^{-1} + X^{T} \sum \nolimits ^{-1} X) \omega) \\
+  &\prec exp(y^{T} \sum \nolimits ^{-1} X + \omega_0^{T} V_0^{-1}) \omega - \frac{1}{2} \omega^{T}(V_0^{-1} + X^{T} \sum \nolimits ^{-1} X) \omega) \\
+  &= exp(\eta^{T} \omega - \frac{1}{2} \omega \Lambda \omega) \\
+  &= \mathcal{N}(\omega \mid \omega_n, V_n)
+\end{align*}
+For the expressions $\Lambda$ and $\eta$ we can reordering :
+
+\begin{align*}
+\Lambda = V_n^{-1} = V_0^{-1} + X^{T} \sum \nolimits ^{-1} X \Leftrightarrow V_n = (V_0^{-1} + X^{T} \sum \nolimits^{-1} X)^{-1} \\
+\end{align*}
+\begin{align*}
+\eta^{T} = V_n^{-1} \omega_n \Leftrightarrow \omega_n = \frac{\eta^{T}}{V_n^{-1}} = \eta^{T} V_n = (y^{T} \sum \nolimits ^{-1} X + \omega_0^{T} V_0^{-1})^{T} V_n \\
+\end{align*}
 
 \end{document}

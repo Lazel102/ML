@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.8.10)  30 OCT 2021 17:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.8.10)  13 NOV 2021 17:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/home/zet/Desktop/Current Semester/ML/Exercises/first_sheet.tex"
-(/home/zet/Desktop/Current Semester/ML/Exercises/first_sheet.tex
+**"/home/zet/Desktop/Current Semester/ML/Exercises/Sheet_5/Latex/lazel102-nifis105-ex05.tex"
+(/home/zet/Desktop/Current Semester/ML/Exercises/Sheet_5/Latex/lazel102-nifis105-ex05.tex
 LaTeX2e <2020-02-02> patch level 2
 L3 programming layer <2020-02-14> (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
@@ -26,10 +26,8 @@ File: size10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 Package: babel 2020/02/14 3.40 The Babel package
  (/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
 File: switch.def 2020/02/14 3.40 Babel switching mechanism
-) (/usr/share/texlive/texmf-dist/tex/generic/babel-german/ngerman.ldf
-Language: ngerman 2018/12/08 v2.11 German support for babel (post-1996 orthography)
- (/usr/share/texlive/texmf-dist/tex/generic/babel-german/ngermanb.ldf
-Language: ngermanb 2018/12/08 v2.11 German support for babel (post-1996 orthography)
+) (/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
  (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2020/02/14 3.40 Babel common definitions
 \babel@savecnt=\count175
@@ -38,8 +36,13 @@ File: babel.def 2020/02/14 3.40 Babel common definitions
 \bbl@readstream=\read2
 \bbl@dirlevel=\count176
 )
-Package babel Info: Making " an active character on input line 121.
-))) (/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
+Package babel Info: \l@canadian = using hyphenrules for english
+(babel)             (\language0) on input line 102.
+Package babel Info: \l@australian = using hyphenrules for ukenglish
+(babel)             (\language65) on input line 105.
+Package babel Info: \l@newzealand = using hyphenrules for ukenglish
+(babel)             (\language65) on input line 108.
+)) (/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2017/10/31 v2.20.4
 \thm@style=\toks14
 \thm@bodyfont=\toks15
@@ -174,8 +177,8 @@ File: ansinew.def 2018/08/11 v1.3c Input encoding file
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count266
 \l__pdf_internal_box=\box48
-) (/home/zet/Desktop/Current Semester/ML/Exercises/first_sheet.aux)
-\openout1 = `first_sheet.aux'.
+) (/home/zet/Desktop/Current Semester/ML/Exercises/Sheet_5/Latex/lazel102-nifis105-ex05.aux)
+\openout1 = `lazel102-nifis105-ex05.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
 LaTeX Font Info:    ... okay on input line 17.
@@ -232,129 +235,22 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 18.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Overfull \hbox (1.5006pt too wide) in paragraph at lines 56--57
-\OT1/cmr/m/n/10 Das oben-be-schrie-ben vor-ge-hen l[]asst sich als das auf-ein-an-der-fol-gen-de durchf[]uhren
- []
+) (/home/zet/Desktop/Current Semester/ML/Exercises/Sheet_5/Latex/ex1.tex [1
 
-
-/home/zet/Desktop/Current Semester/ML/Exercises/first_sheet.tex:58: LaTeX Error: Environment fleqn undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.58 \begin{fleqn}
-                  %[1cm]
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-[1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-
-/home/zet/Desktop/Current Semester/ML/Exercises/first_sheet.tex:64: LaTeX Error: \begin{document} ended by \end{fleqn}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.64 \end{fleqn}
-                
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-/home/zet/Desktop/Current Semester/ML/Exercises/first_sheet.tex:69: LaTeX Error: Environment fleqn undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.69 \begin{fleqn}
-                  %[1cm]
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-/home/zet/Desktop/Current Semester/ML/Exercises/first_sheet.tex:73: LaTeX Error: \begin{document} ended by \end{fleqn}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.73 \end{fleqn}
-                
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-[2]
-/home/zet/Desktop/Current Semester/ML/Exercises/first_sheet.tex:142: Missing $ inserted.
-<inserted text> 
-                $
-l.142 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-/home/zet/Desktop/Current Semester/ML/Exercises/first_sheet.tex:142: Display math should end with $$.
-<to be read again> 
-                   \par 
-l.142 
-      
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
-
-
-/home/zet/Desktop/Current Semester/ML/Exercises/first_sheet.tex:143: LaTeX Error: Bad math environment delimiter.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.143 \]
-        
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-/home/zet/Desktop/Current Semester/ML/Exercises/first_sheet.tex:143: Missing $ inserted.
-<inserted text> 
-                $
-l.143 \]
-        
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-/home/zet/Desktop/Current Semester/ML/Exercises/first_sheet.tex:143: Display math should end with $$.
-<to be read again> 
-                   \endgroup 
-l.143 \]
-        
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
-
-[3] [4] (/home/zet/Desktop/Current Semester/ML/Exercises/first_sheet.aux) ) 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) (/home/zet/Desktop/Current Semester/ML/Exercises/Sheet_5/Latex/ex2.tex) (/home/zet/Desktop/Current Semester/ML/Exercises/Sheet_5/Latex/ex3.tex) (/home/zet/Desktop/Current Semester/ML/Exercises/Sheet_5/Latex/ex4.tex) [2] (/home/zet/Desktop/Current Semester/ML/Exercises/Sheet_5/Latex/lazel102-nifis105-ex05.aux) ) 
 Here is how much of TeX's memory you used:
- 3802 strings out of 481239
- 53339 string characters out of 5920377
- 302348 words of memory out of 5000000
- 19026 multiletter control sequences out of 15000+600000
- 539586 words of font info for 53 fonts, out of 8000000 for 9000
+ 3751 strings out of 481239
+ 53199 string characters out of 5920377
+ 302421 words of memory out of 5000000
+ 18966 multiletter control sequences out of 15000+600000
+ 539893 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,6n,31p,453b,199s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on "/home/zet/Desktop/Current Semester/ML/Exercises/first_sheet.pdf" (4 pages, 105460 bytes).
+ 37i,8n,31p,338b,197s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on "/home/zet/Desktop/Current Semester/ML/Exercises/Sheet_5/Latex/lazel102-nifis105-ex05.pdf" (2 pages, 91752 bytes).
 PDF statistics:
- 53 PDF objects out of 1000 (max. 8388607)
- 37 compressed objects within 1 object stream
+ 51 PDF objects out of 1000 (max. 8388607)
+ 36 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

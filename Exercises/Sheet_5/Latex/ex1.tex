@@ -1,0 +1,46 @@
+
+\subsection*{(a)}
+
+    Let $x,b \in \R^m, \alpha \in \R$ and $A \in R^{mxm}$. We want to find the gradient of :
+    
+    \[
+    \psi = x^TAx+ b^Tx+\alpha    
+    \]
+
+    We have:
+
+    \begin{align*}
+        d\psi   &= d(x^TAx+b^Tx+\alpha)\\
+                &= dx^TAx+db^Tx+d\alpha\\
+                &= dx^TAx+db^Tx\\
+                &= x^T(A+A^T)dx +db^Tx \\
+                &= x^T(A+A^T)dx +d(b)^Tx+b^Tdx \\
+                &= (x^T(A+A^T)+b^T)dx\\
+    \end{align*}
+So:
+
+\[
+D\psi= x^T(A+A^T)+b^T   
+\]
+
+\subsection*{(b)}
+Let $x_i \in \R^n$ and $y_i \in \{0,1\}$ for $1 \leq i \leq n$ We are looking for the dervative of 
+\[
+\tau = \sum_{i=1}^n(y_i-\sigma(x_i^T\omega +b))^2 
+\]
+
+,where:
+
+\[
+\sigma(\alpha) = \frac{1}{1+exp(\alpha)} 
+\]
+
+We have:
+
+\begin{align*}
+    d\tau   &=d(\sum_{i=1}^n(y_i-\sigma(x_i^T\omega +b))^2 ) \\
+            &= \sum_{i=1}^nd((y_i-\sigma(x_i^T\omega +b))^2) \\
+            &=\sum_{i=1}^n2(y_i-\sigma(x_i^T\omega +b))^2 +d(y_i-\sigma(x_i^T\omega +b))^2  \\
+\end{align*}
+
+

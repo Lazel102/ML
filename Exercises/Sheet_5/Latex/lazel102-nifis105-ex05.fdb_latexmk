@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1636819339 "/home/zet/Desktop/Current Semester/ML/Exercises/Sheet_5/Latex/lazel102-nifis105-ex05.tex" "/home/zet/Desktop/Current Semester/ML/Exercises/Sheet_5/Latex/lazel102-nifis105-ex05.pdf" "lazel102-nifis105-ex05" 1636819344
+["pdflatex"] 1636888134 "/home/zet/Desktop/Current Semester/ML/Exercises/Sheet_5/Latex/lazel102-nifis105-ex05.tex" "/home/zet/Desktop/Current Semester/ML/Exercises/Sheet_5/Latex/lazel102-nifis105-ex05.pdf" "lazel102-nifis105-ex05" 1636888149
   "/etc/texmf/web2c/texmf.cnf" 1597081286 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/zet/Desktop/Current Semester/ML/Exercises/Sheet_5/Latex/lazel102-nifis105-ex05.aux" 1636819340 57 619b67dd3451499dc813b2d4730366a3 ""
+  "/home/zet/Desktop/Current Semester/ML/Exercises/Sheet_5/Latex/lazel102-nifis105-ex05.aux" 1636888134 57 619b67dd3451499dc813b2d4730366a3 ""
   "/home/zet/Desktop/Current Semester/ML/Exercises/Sheet_5/Latex/lazel102-nifis105-ex05.tex" 1636819339 1095 a526d548a07f4fc0ed217af753773461 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -31,6 +31,7 @@
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1248133631 32362 179c33bbf43f19adbb3825bb4e36e57a ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb" 1248133631 31809 8670ca339bf94e56da1fc21c80635e2a ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1248133631 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1248133631 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
@@ -71,15 +72,15 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1581979058 38841 ce3692aa899bb693b90b87eaa5d4d84e ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1597081342 4770781 1ed1abab22da9c3e2cc82e4db562318b ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1597081367 8255700 4a560a1964254796a6c61f1337dd9981 ""
-  "ex1.tex" 1636819255 1001 38a45ee7127a4f65094f64687e4c0616 ""
+  "ex1.tex" 1636888134 3099 09781532a7d84dac283784ba3cdd5193 ""
   "ex2.tex" 1636819156 1 68b329da9893e34099c7d8ad5cb9c940 ""
   "ex3.tex" 1636818098 0 d41d8cd98f00b204e9800998ecf8427e ""
   "ex4.tex" 1636818098 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "lazel102-nifis105-ex05.aux" 1636819340 57 619b67dd3451499dc813b2d4730366a3 "pdflatex"
+  "lazel102-nifis105-ex05.aux" 1636888134 57 619b67dd3451499dc813b2d4730366a3 "pdflatex"
   "lazel102-nifis105-ex05.tex" 1636819339 1095 a526d548a07f4fc0ed217af753773461 ""
   (generated)
-  "/home/zet/Desktop/Current Semester/ML/Exercises/Sheet_5/Latex/lazel102-nifis105-ex05.pdf"
-  "lazel102-nifis105-ex05.aux"
   "lazel102-nifis105-ex05.log"
   "lazel102-nifis105-ex05.pdf"
+  "lazel102-nifis105-ex05.aux"
+  "/home/zet/Desktop/Current Semester/ML/Exercises/Sheet_5/Latex/lazel102-nifis105-ex05.pdf"
   "/home/zet/Desktop/Current Semester/ML/Exercises/Sheet_5/Latex/lazel102-nifis105-ex05.log"

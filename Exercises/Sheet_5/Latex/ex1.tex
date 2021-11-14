@@ -40,7 +40,65 @@ We have:
 \begin{align*}
     d\tau   &=d(\sum_{i=1}^n(y_i-\sigma(x_i^T\omega +b))^2 ) \\
             &= \sum_{i=1}^nd((y_i-\sigma(x_i^T\omega +b))^2) \\
-            &=\sum_{i=1}^n2(y_i-\sigma(x_i^T\omega +b))^2 +d(y_i-\sigma(x_i^T\omega +b))^2  \\
+            &=\sum_{i=1}^n2(y_i-\sigma(x_i^T\omega +b))d(y_i-\sigma(x_i^T\omega +b))  \\
+            &=\sum_{i=1}^n2(y_i-\sigma(x_i^T\omega +b))(dy_i-d\sigma(x_i^T\omega +b))  \\
+            &=-2\sum_{i=1}^n(y_i-\sigma(x_i^T\omega +b))(\sigma(x_i^T\omega +b)\cdot(1-\sigma(x_i^T\omega +b))d(x_i^T\omega +b)  \\
+            &=-2\sum_{i=1}^n(y_i-\sigma(x_i^T\omega +b))(\sigma(x_i^T\omega +b)\cdot(1-\sigma(x_i^T\omega +b))db
 \end{align*}
+ So the dervative with respect to b is:
+
+ \[
+ D_b \tau =   -2\sum_{i=1}^n(y_i-\sigma(x_i^T\omega +b))(\sigma(x_i^T\omega +b)\cdot(1-\sigma(x_i^T\omega +b))  
+ \]
+
+ And for $\omega$ we have :
+
+\begin{align*}
+    d\tau       &=-2\sum_{i=1}^n(y_i-\sigma(x_i^T\omega +b))(\sigma(x_i^T\omega +b)\cdot(1-\sigma(x_i^T\omega +b))d(x_i^T\omega +b)  \\
+                &=-2\sum_{i=1}^n(y_i-\sigma(x_i^T\omega +b))(\sigma(x_i^T\omega +b)\cdot(1-\sigma(x_i^T\omega +b))x_i^T d\omega
+\end{align*}
+
+So we have :
+
+\[
+    D_b \omega =    -2\sum_{i=1}^n(y_i-\sigma(x_i^T\omega +b))(\sigma(x_i^T\omega +b)\cdot(1-\sigma(x_i^T\omega +b))x_i^T 
+\]
+
+
+
+Let $x,y \in \R^m, A, B \in \R^{mxm}\text{ and }\sigma $ the sigmoid function we are lookig for the gradient of :
+
+\[
+\psi(x)= ||y-A\sigma(Bx)||_2^2    
+\]
+
+
+\subsection*{(c)}
+let $x,y \in \R^m, A,B \in \R^{mxm}$ and $\sigma$ the sigmoid function. We want to find the gradinet of 
+
+\[
+\psi  = ||y-A\sigma(Bx)||_2^2    
+\]
+
+By using the definition of the euklidean Norm we have:
+
+\begin{align*}
+    d\psi   &=  d||y-A\sigma(Bx)||_2^2\\
+            &= d((\sum_{i=1}^m (y_i -\sigma(Bx)_i)^2)^{\frac{1}{2}})^2\\
+            &=  d\sum_{i=1}^m (y_i -\sigma(Bx)_i)^2\\
+            &=  \sum_{i=1}^m d(y_i -\sigma(Bx)_i)^2 \\
+            &=   \sum_{i=1} 2(y_i -\sigma(Bx)_i)d(y_i -\sigma(Bx)_i)\\
+            &=   \sum_{i=1} 2(y_i -\sigma(Bx)_i)(dy_i -d\sigma(Bx)_i)\\
+            &=   \sum_{i=1} 2(y_i -\sigma(Bx)_i)(-d\sigma(Bx)_i)\\
+            &=   \sum_{i=1} 2(y_i -\sigma(Bx)_i)(-\sigma(Bx)_i\odot(1--\sigma(Bx)_i))dBx_i \\
+            &=   \sum_{i=1} 2(y_i -\sigma(Bx)_i)(-\sigma(Bx)_i\odot(1--\sigma(Bx)_i))Bdx_i 
+\end{align*}
+
+Then we have : 
+
+\[
+D\psi =     \sum_{i=1} 2(y_i -\sigma(Bx)_i)(-\sigma(Bx)_i\odot(1--\sigma(Bx)_i))Bdx_i 
+\]
+
 
 

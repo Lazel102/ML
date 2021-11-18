@@ -1,0 +1,20 @@
+\textbf{Given:} Let $m \leq n \leq k, y \in \R^m, b\in \R^k$ and $A \in \R^{mxn},B \in \R^{kxn}$
+We are considering the follwoing optimization optimization problem:
+
+\begin{align*}
+    \min_{x \in \R^n} &||Ax-y||_2^2\\
+    \text{s.t.}              & Bx=b  
+\end{align*}
+
+\textbf{Task:} Find a matrix $P \in \R^{(n+k)x(n+k)}$ and a vector $p \in \R^{n+k}$ such that solving :
+\[
+P  \begin{bmatrix}  x \\ \lambda \end{bmatrix} =p   
+\]
+
+gives a critical point for the optimization problem.
+
+\textbf{Solution:} We will start by defining the Langragian function associated to this problem:
+
+\[
+L(\lambda) = ||Ax-y||_2^2 + \lambda \cdot (Bx - b)
+\]

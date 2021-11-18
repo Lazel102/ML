@@ -66,21 +66,16 @@ So we have :
 
 
 
-Let $x,y \in \R^m, A, B \in \R^{mxm}\text{ and }\sigma $ the sigmoid function we are lookig for the gradient of :
-
-\[
-\psi(x)= ||y-A\sigma(Bx)||_2^2    
-\]
 
 
 \subsection*{(c)}
-let $x,y \in \R^m, A,B \in \R^{mxm}$ and $\sigma$ the sigmoid function. We want to find the gradinet of 
+Let $x,y \in \R^m, A,B \in \R^{mxm}$ and $\sigma$ the sigmoid function. We want to find the gradient of 
 
 \[
 \psi  = ||y-A\sigma(Bx)||_2^2    
 \]
 
-By using the definition of the euklidean Norm we have:
+By using the definition of the Euclidean Norm we have:
 
 \begin{align*}
     d\psi   &=  d||y-A\sigma(Bx)||_2^2\\
@@ -89,16 +84,31 @@ By using the definition of the euklidean Norm we have:
             &=  \sum_{i=1}^m d(y_i -\sigma(Bx)_i)^2 \\
             &=   \sum_{i=1} 2(y_i -\sigma(Bx)_i)d(y_i -\sigma(Bx)_i)\\
             &=   \sum_{i=1} 2(y_i -\sigma(Bx)_i)(dy_i -d\sigma(Bx)_i)\\
-            &=   \sum_{i=1} 2(y_i -\sigma(Bx)_i)(-d\sigma(Bx)_i)\\
-            &=   \sum_{i=1} 2(y_i -\sigma(Bx)_i)(-\sigma(Bx)_i\odot(1--\sigma(Bx)_i))dBx_i \\
-            &=   \sum_{i=1} 2(y_i -\sigma(Bx)_i)(-\sigma(Bx)_i\odot(1--\sigma(Bx)_i))Bdx_i 
+            &=   -\sum_{i=1} 2(y_i -\sigma(Bx)_i)(d\sigma(Bx)_i)\\
+            &=   -\sum_{i=1} 2(y_i -\sigma(Bx)_i)(\sigma(Bx)_i\odot(1-\sigma(Bx)_i))dBx_i \\
+            &=   -\sum_{i=1} 2(y_i -\sigma(Bx)_i)(\sigma(Bx)_i\odot(1-\sigma(Bx)_i))Bdx_i 
 \end{align*}
 
 Then we have : 
 
 \[
-D\psi =     \sum_{i=1} 2(y_i -\sigma(Bx)_i)(-\sigma(Bx)_i\odot(1--\sigma(Bx)_i))Bdx_i 
+D\psi =     -\sum_{i=1} 2(y_i -\sigma(Bx)_i)(-\sigma(Bx)_i\odot(1-\sigma(Bx)_i))B
 \]
+
+\subsection*{(d)}
+
+We want to proof that $d(\phi^{\alpha}) = \alpha\phi^{\alpha-1}d\phi$ by induction.
+
+For $\alpha = 1$ we have $d(\phi^{1} = d\phi = 1 \phi^{0}d\phi = d\phi$.
+
+For $\alpha \rightarrow \alpha +1$ we want to prove that $d(\phi^{\alpha+1}) = (\alpha+1)\phi^{(\alpha+1)-1}d\phi$.
+\begin{align*}
+	d(\phi^{\alpha+1}) &= d(\phi^{\alpha}\phi) \\
+	&= d(\phi^{\alpha})\phi + \phi^{\alpha}d(\phi) \\
+	&= \alpha\phi^{\alpha-1}\phi d\phi + \phi^{\alpha}d\phi \\
+	&=(\alpha\phi^{\alpha-1}\phi+\phi^{\alpha})d\phi \\
+	&=(\alpha+1)\phi^{\alpha}d\phi
+\end{align*}
 
 
 

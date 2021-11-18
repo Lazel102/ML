@@ -1,0 +1,14 @@
+We want to calculate the derivative of $p(y|X, \omega) = \mathcal{N} (y|X\omega, \sigma^{2}I)$.
+
+We take $a = \frac{1}{(2\pi)\det(\sigma^{2}I)}$ and $b = exp(-\frac{1}{2}(y - X\omega)^{T}\sigma^{2}I^{-1}(y - X\omega))$.
+\begin{align*}
+	d(p(y|X, \omega) 
+	&= d\mathcal{N}(y|X\omega, \sigma^{2}I) \\
+	&= d \frac{1}{(2\pi)\det(\sigma^{2}I)}exp(-\frac{1}{2}(y - X\omega)^{T}\sigma^{2}I^{-1}(y - X\omega) \\
+	&= a d exp(-\frac{1}{2}(y-X\omega)^{T}\sigma^{2}I^{-1}(y-X\omega)) exp(-\frac{1}{2}(y - X\omega)^{T}\sigma^{2}I^{-1}(y - X\omega))\\ 
+	&= a(d-\frac{1}{2}(y-X\omega)^{T}\sigma^{2}I^{-1} (y-X\omega) - \frac{1}{2}(y-X\omega)^{T} d\sigma^{2} I^{-1}(y -X\omega)) b \\ 
+	&= a(-\frac{1}{2} - dX\omega)^{T} \sigma^{2}I^{-1}(y-X\omega) - \frac{1}{2}(y-X\omega)^{T} \sigma^{2} I^{-1}(-dX\omega)) b \\
+	&= a (-\frac{1}{2} (-1)((dX)\omega + Xd\omega) \sigma^{2}(y-X\omega) - \frac{1}{2}(y-X\omega)^{T} \sigma^{2} I^{-1}(-(dX)\omega + Xd\omega)) b \\
+	&= a(\frac{1}{2} Xd\omega \sigma^{2} (y-X\omega) - \frac{1}{2}(y-X\omega)^{T} \sigma^{2} I^{-1} Xd\omega) b \\
+	&= a(\frac{1}{2} X \sigma^{2} (y-X\omega) - \frac{1}{2}(y-X\omega)^{T} \sigma^{2} I^{-1} X) b d\omega
+\end{align*}

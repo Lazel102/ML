@@ -13,8 +13,88 @@ P  \begin{bmatrix}  x \\ \lambda \end{bmatrix} =p
 
 gives a critical point for the optimization problem.
 
+\begin{proof}
+    
+
+
 \textbf{Solution:} We will start by defining the Langragian function associated to this problem:
 
 \[
-L(\lambda) = ||Ax-y||_2^2 + \lambda \cdot (Bx - b)
+L(\lambda) = ||Ax-y||_2^2 + \lambda^T \cdot (Bx - b)
 \]
+
+We will now search for the derivatives with respect to $x$ and $\lambda$ by using Matrix differential calculus:
+\begin{itemize}
+    \item We will start by calculating $D_x L$
+    
+    \begin{align*}
+    dL  &= d||Ax-y||_2^2+d\lambda^T (Bx-b)\\
+        &= d(Ax-y)^T(Ax-y)+ \lambda^T B dx\\
+        &= 2(Ax-y)^Td(Ax-y)+ \lambda^T B dx\\
+        &= 2(Ax-y)^TAdx+ \lambda^T B dx
+    \end{align*}
+So :
+
+\[
+    D_x L = 2(Ax-y)^TA+\lambda^T B 
+\]
+
+\item We will now calculate $D_{\lambda}L$:
+    \begin{align*}
+        dL  &= d||Ax-y||_2^2+d\lambda^T (Bx-b)\\
+            &=  (Bx-b)^Td\lambda
+    \end{align*}
+So we have :
+
+ \[
+     \nabla L = (2(Ax-y)^TAdx+ \lambda^T B , (Bx-b)^T)
+\]
+ 
+\item For $\nabla L = 0$ we have :
+
+\begin{align*}
+    &\begin{bmatrix}  
+        0 \\ 0 
+    \end{bmatrix}    
+    = 
+    \begin{bmatrix}  
+        (Bx-b)^T \\ 2(Ax-y)^TA+ \lambda^T B 
+    \end{bmatrix}\\ 
+    &\leftrightarrow
+    \begin{bmatrix}  
+        b \\ 2y^TA 
+    \end{bmatrix} 
+    =
+    \begin{bmatrix}  
+        Bx\\ 2(Ax)^TA^TA+ \lambda^T B 
+    \end{bmatrix} \\
+    &\leftrightarrow
+    \begin{bmatrix}  
+        b \\ 2(y^TA)^T
+    \end{bmatrix} 
+    =
+    \begin{bmatrix}  
+        Bx\\ 2A^TAx  + B^T\lambda 
+    \end{bmatrix} \\
+    &\leftrightarrow
+    \begin{bmatrix}  
+        b \\ 2(y^TA)^T
+    \end{bmatrix} 
+    =
+    \begin{bmatrix}  
+        B & 0^{kxn}\\ 2A^TA  & B^T 
+    \end{bmatrix} 
+    \begin{bmatrix}  
+        x \\ \lambda 
+    \end{bmatrix} 
+\end{align*}
+
+So with $p=\begin{bmatrix}  b \\ 2(y^TA)^T \end{bmatrix} $ and $P=\begin{bmatrix}  B & 0^{kxn}\\ 2A^TA  & B^T \end{bmatrix} $ solving 
+
+\[
+P  \begin{bmatrix}  x \\ \lambda \end{bmatrix} =p   
+\]
+
+will give a critical point to the optimization problem.
+\end{itemize}
+\end{proof}

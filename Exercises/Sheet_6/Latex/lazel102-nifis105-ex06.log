@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.8.10)  23 NOV 2021 16:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.8.10)  23 NOV 2021 19:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -238,29 +238,6 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/home/zet/Desktop/Current Semester/ML/Exercises/Sheet_6/Latex/ex1.tex [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) (/home/zet/Desktop/Current Semester/ML/Exercises/Sheet_6/Latex/ex2.tex
-/home/zet/Desktop/Current Semester/ML/Exercises/Sheet_6/Latex/ex2.tex:9: Undefined control sequence.
-<argument> ...ext {s.t} &y_i(w^Tx_i+b)\geq p-\xii 
-                                                  \forall i \\ &\xi \geq 0 \...
-l.9 \end{align*}
-                
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/home/zet/Desktop/Current Semester/ML/Exercises/Sheet_6/Latex/ex2.tex:9: Undefined control sequence.
-<argument> ...ext {s.t} &y_i(w^Tx_i+b)\geq p-\xii 
-                                                  \forall i \\ &\xi \geq 0 \...
-l.9 \end{align*}
-                
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
 Overfull \hbox (126.43253pt too wide) detected at line 17
 []
  []
@@ -298,15 +275,15 @@ LaTeX Warning: Command \textbrokenbar invalid in math mode on input line 33.
 Missing character: There is no ¦ in font cmr10!
 [3]) (/home/zet/Desktop/Current Semester/ML/Exercises/Sheet_6/Latex/ex3.tex) (/home/zet/Desktop/Current Semester/ML/Exercises/Sheet_6/Latex/ex4.tex) [4] (/home/zet/Desktop/Current Semester/ML/Exercises/Sheet_6/Latex/lazel102-nifis105-ex06.aux) ) 
 Here is how much of TeX's memory you used:
- 3759 strings out of 481239
- 53282 string characters out of 5920377
+ 3758 strings out of 481239
+ 53279 string characters out of 5920377
  306421 words of memory out of 5000000
- 18971 multiletter control sequences out of 15000+600000
+ 18970 multiletter control sequences out of 15000+600000
  540575 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,14n,31p,347b,302s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on "/home/zet/Desktop/Current Semester/ML/Exercises/Sheet_6/Latex/lazel102-nifis105-ex06.pdf" (4 pages, 149858 bytes).
+Output written on "/home/zet/Desktop/Current Semester/ML/Exercises/Sheet_6/Latex/lazel102-nifis105-ex06.pdf" (4 pages, 149859 bytes).
 PDF statistics:
  82 PDF objects out of 1000 (max. 8388607)
  59 compressed objects within 1 object stream

@@ -8,6 +8,50 @@
     &p\geq 0
 \end{align*}
 
+
 \begin{itemize}
     \item[\textbf{(a)}] The Langragian is given by 
+    ]\begin{align*}
+        L(w,b,\xi,p,\alpha, \beta, \delta)  &= \frac{1}{2}||w||^2 -vp +\frac{1}{n}\sum_i\xi_i - \sum_i\alpha_i(y_i(<x_i,w>+b)-p+\xi_i) -\sum_i\xi_i\beta_i - \delta p\\
+                                            &=\frac{1}{2}||w||^2-p(v+\delta-\sum_i\alpha_i)-\sum_i(\frac{1}{n}-\alpha_i+\beta_i)\xi_i-<\sum_i\alpha_iy_ix_i,w>-(\sum\alpha_iy_i)b
+    \end{align*} 
+
+\item[\textbf{(b)}]  The corresponding partial derrivatives with respect to $w, b, \xi, p$ are given by:
+
+\begin{align}
+    \frac{\partial L}{\partial w}= w -\sum_i \alpha_iy_ix_i \\
+    \frac{\partial L}{\partial b}= -\sum_i\alpha_iy_i\\
+    \frac{\partial L}{\partial \xi}= \sum \frac{1}{n}-\alpha_i+\beta_i\\
+    \frac{\partial L}{\partial p}= v+\delta -\sum_i\alpha_i
+\end{align}
+\item[\textbf{c}] Setting the partial derrivatives to zero gives us :
+\begin{align*}
+    L(w_0,b_0,\xi_0,p_0,\alpha, \beta, \delta)\frac{1}{2}<\sum_i\alpha_iy_ix_i,\sum_\alpha_iy_ix_i>
+\end{align*}] 
+\item[\textbf{d}] Because \textbf{(3) } we have :
+\[
+\frac{1}{n}-\ælpha_i \beta_i =0   
+\]  
+and since $\alpha_i,\beta_i\geq 0$ we have :
+\[
+0\leq \alpha_i \leq n    
+\]
+Furthermore we get from \textbf{(4)} set to 0 :
+\[
+\sum \alpha_i =v+\delta    
+\]
+and since $\delta \geq 0$ we have 
+
+\[
+\sum_i\alpha_i \geq v    
+\]
+
+\item[\textbf{(e)}] Thus we have the dual problem given by :
+
+\begin{align*}
+    \max_\alpha & \frac{1}{2} <\sum_i\alpha_iy_ix_i,\sum_i\alpha_iy_ix_i>\\
+                &\text{s.t.} \frac{1}{n}\geq \alpha_i \forall i\\
+                &\sum_i\alpha_i \geq v \forall i\\
+                &\alpha_i\geq 0 \forall 
+\end{align*} 
 \end{itemize}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.8.10)  7 DEC 2021 11:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.8.10)  7 DEC 2021 12:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -242,72 +242,85 @@ File: exo1.png Graphic file (type png)
 Package pdftex.def Info: exo1.png  used on input line 3.
 (pdftex.def)             Requested size: 345.0pt x 181.077pt.
 ) (/home/zet/Desktop/Current Semester/ML/Exercises/Sheet_8/Latex/ex2.tex
+
+/home/zet/Desktop/Current Semester/ML/Exercises/Sheet_8/Latex/ex2.tex:3: LaTeX Error: Unknown float option `H'.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \begin{figure}[H]
+                     
+Option `H' ignored and `p' used.
+
 <swiss_roll.png, id=3, 985.6825pt x 526.96875pt>
 File: swiss_roll.png Graphic file (type png)
 <use swiss_roll.png>
-Package pdftex.def Info: swiss_roll.png  used on input line 3.
+Package pdftex.def Info: swiss_roll.png  used on input line 5.
 (pdftex.def)             Requested size: 345.0pt x 184.44182pt.
 
+/home/zet/Desktop/Current Semester/ML/Exercises/Sheet_8/Latex/ex2.tex:11: LaTeX Error: Unknown float option `H'.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 \begin{figure}[H]
+                      
+Option `H' ignored and `p' used.
 
-[1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} </home/zet/Desktop/Current Semester/ML/Exercises/Sheet_8/Latex/exo1.png>]
-<pca.png, id=14, 433.62pt x 289.08pt>
+<pca.png, id=4, 433.62pt x 289.08pt>
 File: pca.png Graphic file (type png)
 <use pca.png>
-Package pdftex.def Info: pca.png  used on input line 8.
+Package pdftex.def Info: pca.png  used on input line 13.
 (pdftex.def)             Requested size: 345.0pt x 230.01158pt.
 
+/home/zet/Desktop/Current Semester/ML/Exercises/Sheet_8/Latex/ex2.tex:18: LaTeX Error: Unknown float option `H'.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 \begin{figure}[H]
+                      
+Option `H' ignored and `p' used.
 
-<k.png, id=15, 433.62pt x 289.08pt>
+<k.png, id=5, 433.62pt x 289.08pt>
 File: k.png Graphic file (type png)
 <use k.png>
-Package pdftex.def Info: k.png  used on input line 13.
+Package pdftex.def Info: k.png  used on input line 20.
 (pdftex.def)             Requested size: 345.0pt x 230.01158pt.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+/home/zet/Desktop/Current Semester/ML/Exercises/Sheet_8/Latex/ex2.tex:26: LaTeX Error: Unknown float option `H'.
 
-<epsilon.png, id=16, 433.62pt x 289.08pt>
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 \begin{figure}[H]
+                      
+Option `H' ignored and `p' used.
+
+<epsilon.png, id=6, 433.62pt x 289.08pt>
 File: epsilon.png Graphic file (type png)
 <use epsilon.png>
-Package pdftex.def Info: epsilon.png  used on input line 18.
+Package pdftex.def Info: epsilon.png  used on input line 28.
 (pdftex.def)             Requested size: 345.0pt x 230.01158pt.
+) [1
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-) (/home/zet/Desktop/Current Semester/ML/Exercises/Sheet_8/Latex/ex3.tex) (/home/zet/Desktop/Current Semester/ML/Exercises/Sheet_8/Latex/ex4.tex) [2 </home/zet/Desktop/Current Semester/ML/Exercises/Sheet_8/Latex/swiss_roll.png>]
-Missing character: There is no ú in font cmr10!
-Missing character: There is no ù in font cmr10!
-Missing character: There is no ø in font cmr10!
- [3
-
-]
-Missing character: There is no ú in font cmr10!
-Missing character: There is no ù in font cmr10!
-Missing character: There is no ø in font cmr10!
-Missing character: There is no ú in font cmr10!
-Missing character: There is no ù in font cmr10!
-Missing character: There is no ø in font cmr10!
-
-Overfull \vbox (10.0pt too high) has occurred while \output is active []
-
- (/home/zet/Desktop/Current Semester/ML/Exercises/Sheet_8/Latex/lazel102-nifis105-ex08.aux) ) 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} </home/zet/Desktop/Current Semester/ML/Exercises/Sheet_8/Latex/exo1.png>] [2 </home/zet/Desktop/Current Semester/ML/Exercises/Sheet_8/Latex/swiss_roll.png> </home/zet/Desktop/Current Semester/ML/Exercises/Sheet_8/Latex/pca.png>] [3 </home/zet/Desktop/Current Semester/ML/Exercises/Sheet_8/Latex/k.png> </home/zet/Desktop/Current Semester/ML/Exercises/Sheet_8/Latex/epsilon.png>] (/home/zet/Desktop/Current Semester/ML/Exercises/Sheet_8/Latex/lazel102-nifis105-ex08.aux) ) 
 Here is how much of TeX's memory you used:
- 3770 strings out of 481239
- 53440 string characters out of 5920377
- 297421 words of memory out of 5000000
- 18982 multiletter control sequences out of 15000+600000
+ 3762 strings out of 481239
+ 53144 string characters out of 5920377
+ 298421 words of memory out of 5000000
+ 18980 multiletter control sequences out of 15000+600000
  537887 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,6n,31p,338b,232s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,6n,31p,338b,271s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on "/home/zet/Desktop/Current Semester/ML/Exercises/Sheet_8/Latex/lazel102-nifis105-ex08.pdf" (3 pages, 221695 bytes).
+Output written on "/home/zet/Desktop/Current Semester/ML/Exercises/Sheet_8/Latex/lazel102-nifis105-ex08.pdf" (3 pages, 364082 bytes).
 PDF statistics:
- 38 PDF objects out of 1000 (max. 8388607)
+ 41 PDF objects out of 1000 (max. 8388607)
  21 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)

@@ -1,0 +1,44 @@
+
+\begin{itemize}
+    \item[\textbf{(a)}]
+    \begin{proof}
+        $\frac{1}{n}1_n1_n^T$ will be a matrix of the same form as $I$ with all entries $a_{ij}=\frac{1}{n}$ so H will have entries on the diagonal $a_{ii}=\frac{n-1}{n}$ and all other entries $a_{ij}=-\frac{1}{n}$.
+        Since for a symmetric matirx to obtain the transposed all elements are mirrored on the diagonal we have :
+
+        \[
+        H^T=H    
+        \]
+    \end{proof} 
+    \item[\textbf{(c)}] 
+    We will proof that $H1_n= 0$
+    \begin{proof}
+        \begin{align*}
+            H1_n    &=(I_n-\frac{1}{n}1_n1_n^T)1_n
+                    &= I_n1_n -\frac{1}{n}1_n1_n^T1_n
+                    &=1_n-\frac{1}{n}1_nn
+                    &= 0
+        \end{align*}
+    \end{proof} 
+    \item[\textbf{(b)}]
+    We will show that H is idempotent.
+    \begin{proof}
+        \begin{align*}
+            HH  &=H (I_n-\frac{1}{n}1_n1_n^T)\\
+                &=HI_n -Hfrac{1}{n}1_n1_n^T\\
+                &=H -\frac{1}{n}H1_n1_n^T\\
+                &=H - \frac{1}{n}\cdot0\cdot 1_n^T\\
+                &= H
+        \end{align*}
+        Thus H is idempotent.
+    \end{proof} 
+    \item[\textbf{(d)}] The other eigenvalue of $H$ is 1.
+    \item[\textbf{(e}]We will show that $\frac{1}{n}XG1_n=0_d$ .
+    \begin{proof}
+        Let $X \in \R^{dxn}$ then :
+        \begin{align*}
+            \frac{1}{n}XH1_n &= \frac{1}{n}X0_n\\
+                            &=\frac{1}{N}0_D\\
+                            &= 0_D
+        \end{align*}
+    \end{proof} 
+\end{itemize}

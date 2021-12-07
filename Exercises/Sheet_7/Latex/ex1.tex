@@ -1,0 +1,43 @@
+
+\begin{itemize}
+    
+\item[\textbf{(a)}] \textbf{Question:} Given a matrix $A \in \R^{nxn}$ and one of its eigenvectors $v$, how do you obtain the corresponding eigenvalue $\lambda$.
+\newline
+\textbf{Solution:} By definition of the eigenvector we have
+
+\[
+Av=\lambda v    
+\]
+Since we know $A$ and $v$ we can just plug them in and solve for $\lambda$.
+
+\item[\textbf{(b)}] Show that scaling $v$ by a constant $c$ yields another eigenvector with the same $\lambda$
+\begin{proof}
+    Let $A \in \R^{nxn}$ and $v$ eigenvector of $A$ with corresponding eigenvalue $\lambda$. So we have 
+\[
+Av=\lambda v    
+\]
+Let now $c \in \R$ so we have for the vector $cv$:
+\begin{align*}
+    Acv  &= (Av)c\\
+        &=(\lambda v)c\\
+        &=\lambda cv
+\end{align*}
+Thus $cv$ is another eigenvector of a with the same corresponding eigenvalue $\lambda$
+\end{proof}   
+\item[\textbf{(c)}]
+For symmetric $A \in \R^{nxn}$ with distinct eigenvalues $\lambda_1,...,\lambda_k$ show that the corresponding eigenvectors $v_1,...v_n$ are orthogonal to each other.
+
+\begin{proof}
+    Let $A \in \R^{nxn}$ be symmetric and $v_a, v_b$ two of the  eigenvectors with corresponding distinct eigenvalues $\lambda_a, \lambda_b$. With the definition of eigenvectors and the symmetrie of A we have:
+    \begin{align}
+        v_a^TAv_b=\lambda_a v_a^Tv_b \\
+        v_a^TAv_b=\lambda_b v_a^Tv_b
+    \end{align}
+If we subtract (2) from (1) we have :
+
+\[
+0= (\lambda_a -\lambda_b)   v_a^Tv_b
+\]
+\end{proof}
+And since $\lambda_a$ and $\lambda_b$ are distinct we have $(\lambda_a -\lambda_b) \neq 0$. Thus we have $v_a^Tv_b=0$. So per definition $v_a$ and $v_b$ are orthogonal to each other.
+\end{itemize}

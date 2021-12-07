@@ -1,0 +1,10 @@
+Hello,
+
+here is a brief feedback for your last submission (ex06) in machine learning:
+
+Total points: 56/100
+
+1) 17/20
+2) 24/30
+3) 10/10
+4) 5/40 - Missing formulation and does not run. -35p

@@ -1,0 +1,45 @@
+
+Let us consider $z_n$ to be se from a previous previous iterration step. So we have :
+\[
+J= \sum_n \sum_i z_n^i||x_-\mu_i||^²    
+\]
+We will now show that this Loss function converges and therefore the k-means algorithm converges
+
+\begin{proof}
+    
+
+
+\begin{itemize}
+    \item[\textbf{(a)}] The reassiment step is give by 
+\[
+z_n^i^\prime = \begin{cases}
+    1,& \text{if } i = argmin_j||x_n-u_l||^2\\
+    0,              & \text{otherwise}
+\end{cases}    
+\] 
+So 
+\begin{align*}
+    J^\prime    &= \sum_n \sum_i z_n^i^\prime ||x_n-u_i||^2 \\
+                &= \sum_n \min_i||x_n-u_i||^2
+\end{align*}
+So we have :
+\[
+    J^\prime \leq J
+\]
+Thus the e-step minimizes J
+ \item[b] For the reassigment of the mean we reassine the $\mu_i's$ by definition with teh average of those $x$, which already minimizes $J$, so by construction if we reassign :
+  \[
+  \mu_i^{\prime}=\frac{\sum_n z_n^ix_n}{\sum_nz_n^i}    
+  \]
+  and
+  \[
+  J^{\prime \prime} = \sum_n \sum_i z_n^{i\prime} ||x_n-u_i^\prime||^2 \\ 
+  \]
+    we have 
+    \[
+    0 \leq J^{\prime \prime} \leq J^\prime \leq J    
+    \]
+\item[\textbf{(c)}] We thus conclude that the distortion measure or i.e. the loss function of the k-means algo converges towards $0$ and thus at a given point there will be no more need to reassign the $z_n^i$ or expressed differently k-means is guaranteed to converge.
+\end{itemize}
+
+\end{proof}

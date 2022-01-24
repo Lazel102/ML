@@ -1,0 +1,35 @@
+%This is my super simple Real Analysis Homework template
+
+\documentclass{article}
+\usepackage[english]{babel}
+\usepackage[]{amsthm} %lets us use \begin{proof}
+\usepackage[]{amssymb} %gives us the character \varnothing
+\usepackage{mathtools}
+\usepackage{lineno}
+\usepackage[ansinew]{inputenc}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\uproman}[1]{\uppercase\expandafter{\romannumeral#1}}
+\title{Solutions Sheet}
+\author{Nina Fischer and Yannick Zelle}
+\date\today
+%This information doesn't actually show up on your document unless you use the maketitle command below
+
+\begin{document}
+\maketitle %This command prints the title based on information entered above
+
+%Section and subsection automatically number unless you put the asterisk next to them.
+
+
+%Basically, you type whatever text you want and use the $ sign to enter "math mode".
+%For fancy calligraphy letters, use \mathcal{}
+%Special characters are their own commands
+
+\section*{Exercise 1}
+ \input{ex1.tex}
+\section*{Exercise 2}
+\input{ex2.tex}
+\section*{Exercise 3}
+\input{ex3.tex}
+
+
+\end{document}

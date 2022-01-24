@@ -1,0 +1,38 @@
+\begin{itemize}
+    \item[\textbf{(a)}] 
+    \begin{proof} 
+        Let $k(x_1,x_2)= C$ with $C \in \R_{>0}$. then for $x \in \R^n$ we have:
+    \[
+    x^T k_{\textbf{xx}}x = C(\sum_{i=1}^nx_i)(\sum_{j=1}^nx_j)    
+    \]
+    We will show that this sum is greater or equal to 0. To show that let I be the set of indices from 1 to n. Let further be :
+    \[
+    P \subseteq I := \{i\in I : x_i \geq 0 \}   
+    \]
+    \[
+    N \subseteq I := \{i\in I : x_i < 0 \}   
+    \]
+    Then we can write :
+    \[
+        C(\sum_{i=1}x_i)(\sum_{j=1}x_j)  =   C(\sum_{i \in P}x_i+ \sum_{j \in N}x_j)(\sum_{l \in P}x_l+ \sum_{k \in N}x_k)  
+    \]
+    We can now distinguish two cases:
+
+    \textbf{Case 2: $\sum_{i\in P} x_i \geq \sum_{j \in N} |x_j|$}
+    Then we have 
+    \[
+        C(\underbrace{\sum_{i \in P}x_i+ \sum_{j \in N}x_j}_{\geq 0})(\underbrace{\sum_{l \in P}x_l+ \sum_{k \in N}x_k}_{\geq 0}) \geq 0    
+    \]
+    \textbf{Case 1: $\sum_{i\in P} x_i < \sum_{j \in N} |x_j|$}
+    Then we have 
+    \[
+        C \underbrace{(\underbrace{\sum_{i \in P}x_i+ \sum_{j \in N}x_j}_{< 0})(\underbrace{\sum_{l \in P}x_l+ \sum_{k \in N}x_k}_{< 0})}_{>0} > 0    
+    \]
+    So we have 
+    \[
+        x^T k_{\textbf{xx}}x = C(\sum_{i=1}^nx_i)(\sum_{j=1}^nx_j) \geq 0
+    \]
+    And k is thus positive semidefinite
+    \end{proof}
+    
+\end{itemize}

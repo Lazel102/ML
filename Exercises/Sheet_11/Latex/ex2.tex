@@ -1,0 +1,59 @@
+\begin{itemize}  
+    \item[\textbf{(a)}]
+    \begin{proof}
+We will proof that $k(x,x^{\prime})$ is positive semi-definit. We will do so by prooving that :
+\[
+\forall x_1,\cdots ,x_n \in \R \text{ and }\forall c_1,\cdots ,c_n \in \R   : \sum_{i=1}^n\sum_{j=1}^n c_ic_jk(x_i,x_j) \geq 0
+\]
+We have: 
+\begin{align*}
+    \sum_{i=1}^n\sum_{j=1}^n c_ic_jk(x_i,x_j)   &= \sum_{i=1}^n\sum_{j=1}^n c_ic_j(30x_ix_j+1)\\
+                                                &= \sum_{i=1}^n\sum_{j=1}^n(30x_ix_j c_ic_j+ c_ic_j)\\
+                                                &= 30\sum_{i=1}^n\sum_{j=1}^nx_ix_j c_ic_j + \sum_{i=1}^n\sum_{j=1}^nc_ic_j \\
+                                                &=30(\sum_{i=1}^nc_ix_i)^T\sum_{j=1}^nc_jx_j + (\sum_{i=1}^nc_i)^T\sum_{j=1}^nc_j \\
+                                                &=30||\sum_{i=1}^nx_ic_i||_2^2+||\sum_{i=1}^nc_i||_2^2 \geq 0
+\end{align*}
+\end{proof}
+\item[\textbf{(b)}] With the help of the observed Data and the given Kernel function we can calculate the Covariance Matrix:
+\[
+k_{XX}= \begin{pmatrix}
+    31 & 29\\
+    29 & 31
+    \end{pmatrix}    
+\]
+Additionally according to the lecture $\Lambda$ is give by:
+\[
+  \Lambda= \sigma^2I =   I
+\]
+We can now use the expressions from the lecture to calculate $\mu_*$ and $sigma^2_*$
+\begin{align*}
+    \mu_*   &= m_{X_*}+k_{X_*X}(k_{XX}+\Lambda)^{-1}(y-m_X) \\
+            &= \begin{pmatrix}
+                31 & 29
+                \end{pmatrix} 
+                \begin{pmatrix}
+                32 & 29\\
+                29 & 32
+                \end{pmatrix}^{-1}
+                \begin{pmatrix}
+                    1 \\
+                    1 
+                \end{pmatrix} \\
+            &= 0.984
+\end{align*}
+\begin{align*}
+    \sigma^2_*      &= m_{X_*}+k_{X_*X}(k_{XX}+\Lambda)^{-1}(y-m_X) \\
+                    &= k_{X_*X_*}-k_{X_*X}(k_{XX}+\Lambda)^{-1}k_{XX_*}+\sigma^2\\
+                    &=31 - \begin{pmatrix}
+                        31 & 29
+                        \end{pmatrix} 
+                        \begin{pmatrix}
+                        32 & 29\\
+                        29 & 32
+                        \end{pmatrix}^{-1}\begin{pmatrix}
+                            29 \\
+                            32 
+                        \end{pmatrix} +1 \\
+                    &= 4
+\end{align*}
+\end{itemize}

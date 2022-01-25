@@ -1,7 +1,7 @@
 \begin{itemize}
     \item[\textbf{(a)}] 
     \begin{proof} 
-        Let $k(x_1,x_2)= C$ with $C \in \R_{>0}$. then for $x \in \R^n$ we have:
+        Let $k(x_1,x_2)= C$ with $C \in \R_{>0}$.  Then for $x \in \R^n$ we have:
     \[
     x^T k_{\textbf{xx}}x = C(\sum_{i=1}^nx_i)(\sum_{j=1}^nx_j)    
     \]
@@ -18,12 +18,12 @@
     \]
     We can now distinguish two cases:
 
-    \textbf{Case 2: $\sum_{i\in P} x_i \geq \sum_{j \in N} |x_j|$}
+    \textbf{Case 1: $\sum_{i\in P} x_i \geq \sum_{j \in N} |x_j|$}
     Then we have 
     \[
         C(\underbrace{\sum_{i \in P}x_i+ \sum_{j \in N}x_j}_{\geq 0})(\underbrace{\sum_{l \in P}x_l+ \sum_{k \in N}x_k}_{\geq 0}) \geq 0    
     \]
-    \textbf{Case 1: $\sum_{i\in P} x_i < \sum_{j \in N} |x_j|$}
+    \textbf{Case 2: $\sum_{i\in P} x_i < \sum_{j \in N} |x_j|$}
     Then we have 
     \[
         C \underbrace{(\underbrace{\sum_{i \in P}x_i+ \sum_{j \in N}x_j}_{< 0})(\underbrace{\sum_{l \in P}x_l+ \sum_{k \in N}x_k}_{< 0})}_{>0} > 0    
@@ -32,7 +32,57 @@
     \[
         x^T k_{\textbf{xx}}x = C(\sum_{i=1}^nx_i)(\sum_{j=1}^nx_j) \geq 0
     \]
-    And k is thus positive semidefinite
+    And k is thus positive semidefinite.
     \end{proof}
     
+     \item[\textbf{(b)}] 
+    		\begin{proof} 
+    			Let $k(x_1,x_2)= x_1 \cdot x_2$ with $X = \R$. 
+    			
+    			It follows:
+    				\begin{align*}
+    					\sum_{i=1}^n\sum_{j=1}^n c_i \cdot c_j \cdot k(x_i, x_j) 
+    					&=\sum_{i=1}^n\sum_{j=1}^n c_i \cdot c_j \cdot x_i \cdot x_j\\
+    					&=\sum_{i=1}^n c_i \cdot x_i \sum_{i=1}^n c_i\cdot x_i 
+    					&=(\sum_{i=1}^n c_i \cdot x_i)^2 \geq 0
+    				\end{align*}
+    				Thus k is positive semidefinite.
+     	\end{proof}
+     	
+     	\item[\textbf{(c)}] 
+    		\begin{proof}
+    			Let $k(x_1,x_2)= x_1 + x_2$ with $X = \R$. 
+    			We have x $\in \R$.  So with x=-1 it is:
+    			\[(-1) \cdot k(-1,-1) \cdot (-1) = (-1) \cdot (-2) \cdot (-1) = -2 < 0\]
+    			Therefore $k(x_1,x_2)= x_1 + x_2$ is not positive semidefinite and thus is not a kernel.
+    		\end{proof}
+    		
+    		\item[\textbf{(d)}] 
+    		\begin{proof}
+    			Let $k(x_1,x_2)= 5 \cdot x_1^T \cdot x_2$ with $X = \R^D$. 
+    			
+    			It follows:
+    				\begin{align*}
+    					\sum_{i=1}^n\sum_{j=1}^n c_i \cdot c_j \cdot k(x_i, x_j)
+    					&=\sum_{i=1}^n\sum_{j=1}^n c_i \cdot c_j \cdot 5 \cdot x_i^T \cdot x_j  \\
+    					&=5\cdot (\sum_{i=1}^n c_i \cdot x_i)^T  \cdot (\sum_{i=1}^n c_i \cdot x_i) 
+    					&=5\cdot \|\sum_{i=1}^n c_i \cdot x_i\|_2^2 \geq 0
+    				\end{align*}
+    				Thus k is positive semidefinite.
+    		\end{proof}
+    		
+    		\item[\textbf{(e)}] 
+    		\begin{proof}
+    			Let $k(x_1,x_2)= (x_1^T \cdot x_2 + 1)^2$ with $X = \R^N$. 
+    			\begin{align*}
+    				\sum_{i=1}^n\sum_{j=1}^n c_i \cdot c_j \cdot k(x_i,x_j)   
+    				&= \sum_{i=1}^n\sum_{j=1}^n c_i \cdot c_j \cdot (x_i \cdot x_j+1) \\
+                  &= \sum_{i=1}^n\sum_{j=1}^n c_i \cdot c_j \cdot x_i \cdot x_j + c_i \cdot c_j\\
+                  &= \sum_{i=1}^n\sum_{j=1}^nx_i \cdot x_j \cdot c_i \cdot c_j + \sum_{i=1}^n\sum_{j=1}^nc_ i \cdot c_j \\
+                  &=(\sum_{i=1}^nc_i \cdot x_i)^T\sum_{j=1}^nc_j \cdot x_j + (\sum_{i=1}^nc_i)^T\sum_{j=1}^nc_j \\
+                  &=||\sum_{i=1}^nc_i \cdot x_i||_2^2+||\sum_{i=1}^nc_i||_2^2 \geq 0
+			\end{align*}
+			Thus k is positive semidefinite.
+
+		\end{proof}
 \end{itemize}

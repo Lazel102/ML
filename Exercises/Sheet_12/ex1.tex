@@ -5,13 +5,13 @@ We have :
      $p(r | \lambda)$ & Likelihood \\  
     \end{tabular}
     \end{center}
-    Thus we can dervive our Posterior:
+    Thus we can derive our Posterior:
     \begin{align*}
         p(\lambda |r)   &= \frac{p( \lambda )p(r|\lambda)}{\int_0^{\infty}p(\lambda)p(r|\lambda)d\lambda}\\ 
                         & \propto p(\lambda)p(r|\lambda)\\
                         &= e^{-\lambda}\frac{\lambda^{r-1}}{r!}
     \end{align*}
-    This funcions correpsonds to $P^*$ in the source. We will therefore  assign:
+    This funcions corresponds to $P^*$ in the source. We will therefore  assign:
     \[
     P^*(\lambda) := e^{-\lambda}\frac{\lambda^{r-1}}{r!}   
     \]
@@ -21,7 +21,7 @@ We have :
                     &= \lambda -(r-1)ln(\lambda)+ln(r)\\
                     &\propto \lambda -(r-1)ln(\lambda)
     \end{align*}
-    We will now search for the extrema of L and therefore determine first and secon derivative:
+    We will now search for the extrema of L and therefore determine first and second derivative:
     \[
     \frac{\delta L}{\delta \lambda}= 1-\frac{(r-1)}{\lambda}    
     \]
@@ -29,11 +29,11 @@ We have :
     \[
     \frac{\delta^2 L}{\delta \lambda^2}= \frac{(r-1)}{\lambda^2}    
     \]
-    Setting the first derivative to 0 gives us $\lambda_0=r-1$. We plug this into our seconde derivative:
+    Setting the first derivative to 0 gives us $\lambda_0=r-1$. We plug this into our second derivative:
     \[
         \frac{\delta^2 L(\lambda_0)}{\delta \lambda^2} =\frac{1}{r-1}  >0
     \]
-    Note that this implies that $\lambda_0$ minimises L and because the logarithm is a monotonic increasing function maximises $P^*$. We therefore set:
+    Note that this implies that $\lambda_0$ minimises L and because the logarithm is a monotonic increasing function maximizes $P^*$. We therefore set:
     \[
     \lambda_{MAP} = \lambda_0    
     \]

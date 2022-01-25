@@ -1,1 +1,36 @@
+We want to show the equivalence of
+\begin{center}
+	$p(\tilde{f_i}|f_i) = \mathcal{N}(\tilde{f_i}|f_i, \sigma^2)$ with $p(y_i=1|\tilde{f_i}) =$ 
+	\begin{cases}
+		1,  & \text{if}\ \tilde{f_i}\geq 0 \\
+      	0,  & \text{otherwise}
+	\end{cases} 
+\end{center}
+\newline
+and
+\newline
+\begin{center}
+	$p(y_i=1|f_i) = \sigma_{probit}(f_i) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{f_i} exp(-\frac{t^2}{2})dt$.
+\end{center}
+Therefore we integrate:
+\begin{align*}
+	\int_{-\infty}^\infty p(\tilde{f_i}|f_i) p(y_i=1|\tilde{f_i}) d\tilde{f_i} 
+	=\int_{-\infty}^\infty \frac{1}{\sigma\sqrt{2\pi}} exp(-\frac{(\tilde{f_i}-f_i)^2}{2\sigma^2}) p(y_i|\tilde{f_i}) d\tilde{f_i} \\
+\end{align*}
+Because of the definition of $p(y_i|\tilde{f_i})$ we can rewrite:
+\begin{align*}
+	\int_{-\infty}^\infty p(\tilde{f_i}|f_i) p(y_i=1|\tilde{f_i}) d\tilde{f_i} 
+	&=\int_0^\infty \frac{1}{\sigma\sqrt{2\pi}} exp(-\frac{(\tilde{f_i}-f_i)^2}{2\sigma^2}) d\tilde{f_i} \\
+	&=\int_0^{f_i} \frac{1}{\sigma\sqrt{2\pi}} exp(-\frac{t^2}{2\sigma^2}) dt \\
+\end{align*}
+Thus we have 
+\begin{align*}
+	\int_{-\infty}^\infty p(\tilde{f_i}|f_i) p(y_i=1|\tilde{f_i}) d\tilde{f_i}  
+	=\frac{1}{\sigma\sqrt{2\pi}} \int_0^{f_i} exp(-\frac{t^2}{2\sigma^2}) dt
+\end{align*}
+and to match the function exactly we choose $\sigma^2=1$:
+\begin{align*}
+\frac{1}{1\sqrt{2\pi}} \int_0^{f_i} exp(-\frac{t^2}{2\cdot 1^2}) dt 
+= \frac{1}{\sqrt{2\pi}} \int_0^{f_i} exp(-\frac{t^2}{2}) dt
+\end{align*}
 

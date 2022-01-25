@@ -1,1 +1,52 @@
+We have :
+\begin{center}
+    \begin{tabular}{ c c }
+     $p(\lambda)$ & Prior \\ 
+     $p(r | \lambda)$ & Likelihood \\  
+    \end{tabular}
+    \end{center}
+    Thus we can dervive our Posterior:
+    \begin{align*}
+        p(\lambda |r)   &= \frac{p( \lambda )p(r|\lambda)}{\int_0^{\infty}p(\lambda)p(r|\lambda)d\lambda}\\ 
+                        & \propto p(\lambda)p(r|\lambda)\\
+                        &= e^{-\lambda}\frac{\lambda^{r-1}}{r!}
+    \end{align*}
+    This funcions correpsonds to $P^*$ in the source. We will therefore  assign:
+    \[
+    P^*(\lambda) := e^{-\lambda}\frac{\lambda^{r-1}}{r!}   
+    \]
+    We will consider:
+    \begin{align*}
+        L(\lambda)  &= -ln(P^*(\lambda))\\
+                    &= \lambda -(r-1)ln(\lambda)+ln(r)\\
+                    &\propto \lambda -(r-1)ln(\lambda)
+    \end{align*}
+    We will now search for the extrema of L and therefore determine first and secon derivative:
+    \[
+    \frac{\delta L}{\delta \lambda}= 1-\frac{(r-1)}{\lambda}    
+    \]
 
+    \[
+    \frac{\delta^2 L}{\delta \lambda^2}= \frac{(r-1)}{\lambda^2}    
+    \]
+    Setting the first derivative to 0 gives us $\lambda_0=r-1$. We plug this into our seconde derivative:
+    \[
+        \frac{\delta^2 L(\lambda_0)}{\delta \lambda^2} =\frac{1}{r-1}  >0
+    \]
+    Note that this implies that $\lambda_0$ minimises L and because the logarithm is a monotonic increasing function maximises $P^*$. We therefore set:
+    \[
+    \lambda_{MAP} = \lambda_0    
+    \]
+    and 
+    \[
+    A=   \frac{\delta^2 L(\lambda_0)}{\delta \lambda^2} =\frac{1}{r-1}  
+    \]
+    Therefore we can determine the Gaussian which approximates $P^*$:
+    \[
+    g(\lambda) = \frac{1}{\sqrt{2\pi(r-1)}}e^{-\frac{1}{2(r-1)}(\lambda-(r-1))^2}    
+    \]
+    We can read of the hyperparameters and therefore state :
+
+    \[
+    p(\lambda|r) \approx N(\lambda|r-1,r-1)   
+    \]
